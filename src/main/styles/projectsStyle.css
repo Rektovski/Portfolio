@@ -9,6 +9,7 @@
 
 .projects-card-style:hover {
     transition: 0.7s;
+    box-shadow: #d7cece -2px -1px 5px 5px;
     scale: 1.1;
 }
 

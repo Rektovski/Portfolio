@@ -9,7 +9,7 @@
 
 .profile-img:hover {
     transition: 1s;
-    box-shadow: greenyellow 0 0 20px 20px;
+    box-shadow: #09d0dc 0 0 20px 20px;
 }
 
 .Owner-Specialization {
@@ -62,16 +62,6 @@
     background: linear-gradient(40deg, rgba(193,53,180,1) 0%, rgba(0,0,0,1) 51%, rgba(253,29,29,1) 100%);
 }
 
-.visit-card {
-    transition: all 1s ease-in-out;
-}
-
-.visit-card:hover {
-    transition: 1s;
-    background: rgb(255,176,3);
-    background: linear-gradient(40deg, rgba(255,176,3,1) 0%, rgba(255,255,255,1) 51%, rgba(255,196,0,1) 100%);
-    border-radius: 80%;
-}
 
 .accordion-style {
     padding: 60px;

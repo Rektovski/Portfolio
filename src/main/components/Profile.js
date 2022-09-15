@@ -2,6 +2,7 @@ import profile_picture from "../images/profile_picture.jpg";
 import "../styles/profileStyle.css";
 import {Accordion, Card, Col, Container, Row} from "react-bootstrap";
 import AboutMe from "./AboutMe";
+import Courses from "./Courses";
 
 export default function Profile() {
     return (
@@ -75,17 +76,24 @@ export default function Profile() {
                                 >
                                     Article
                                 </a></Col>
-                                <Col className={'knowledge'} sm={12} lg={4}>Book’s solo co-author => <a
-                                    href={'https://www.seu.edu.ge/uploads/files/News/kompiuteruli%20teqnologiebi%20(1).pdf'}
-                                    target={'_blank'}
-                                    rel={'noreferrer'}
-                                >
-                                    Book
-                                </a></Col>
+                                <Col className={'knowledge'} sm={12} lg={4}>Book’s co-author about students' online
+                                    personal data security during covid-19 => <a
+                                        href={'https://www.seu.edu.ge/uploads/files/News/kompiuteruli%20teqnologiebi%20(1).pdf'}
+                                        target={'_blank'}
+                                        rel={'noreferrer'}
+                                    >
+                                        Book
+                                    </a></Col>
                             </Row>
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey={"3"}>
+                        <Accordion.Header>Courses</Accordion.Header>
+                        <Accordion.Body>
+                            <Courses/>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey={"4"}>
                         <Accordion.Header>About me</Accordion.Header>
                         <Accordion.Body>
                             <AboutMe/>

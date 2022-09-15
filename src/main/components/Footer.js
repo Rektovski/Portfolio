@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div className={'footer text-center'}>
             <a
-                href={"https://www.facebook.com/OtexRektovski"}
+                href={"https://otarmurmanishvili.netlify.app/"}
                 target={"_blank"}
                 rel={"noreferrer"}
                 className={'developer-box'}>
