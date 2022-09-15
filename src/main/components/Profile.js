@@ -1,8 +1,6 @@
-import profile_picture from "../images/profile_picture.jpg";
+import profile_picture from "../images/profile-picture-2.jpg";
 import "../styles/profileStyle.css";
 import {Accordion, Card, Col, Container, Row} from "react-bootstrap";
-import AboutMe from "./AboutMe";
-import Courses from "./Courses";
 
 export default function Profile() {
     return (
@@ -48,16 +46,6 @@ export default function Profile() {
                             </Card>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="1">
-                        <Accordion.Header>Languages</Accordion.Header>
-                        <Accordion.Body>
-                            <Row>
-                                <Col sm={12} lg={4} className={'knowledge'}>Georgian - C2</Col>
-                                <Col sm={12} lg={4} className={'knowledge'}>English - C1</Col>
-                                <Col sm={12} lg={4} className={'knowledge'}>Russian - B1</Col>
-                            </Row>
-                        </Accordion.Body>
-                    </Accordion.Item>
                     <Accordion.Item eventKey={"2"}>
                         <Accordion.Header>Achievements</Accordion.Header>
                         <Accordion.Body>
@@ -84,19 +72,12 @@ export default function Profile() {
                                     >
                                         Book
                                     </a></Col>
+                                <Col>
+                                    <a href={'#contacts'}>
+                                        Come and get me...
+                                    </a>
+                                </Col>
                             </Row>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey={"3"}>
-                        <Accordion.Header>Courses</Accordion.Header>
-                        <Accordion.Body>
-                            <Courses/>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey={"4"}>
-                        <Accordion.Header>About me</Accordion.Header>
-                        <Accordion.Body>
-                            <AboutMe/>
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>

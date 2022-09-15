@@ -16,7 +16,7 @@ export default function ProjectsCards() {
                                 <Card.Title>gesa.ge</Card.Title>
                             </Card.Header>
                             <Card.Body className={'text-center'}>
-                                <img src={GESA} alt={"GESA"}/>
+                                <img className={'project-cards-img'} src={GESA} alt={"GESA"}/>
                             </Card.Body>
                         </Card>
                     </a>
@@ -28,7 +28,7 @@ export default function ProjectsCards() {
                                 <Card.Title>marksman.ge</Card.Title>
                             </Card.Header>
                             <Card.Body className={'text-center'}>
-                                <img src={marksman} alt={"marksman"}/>
+                                <img className={'project-cards-img'} src={marksman} alt={"marksman"}/>
                             </Card.Body>
                         </Card>
                     </a>
@@ -40,7 +40,7 @@ export default function ProjectsCards() {
                                 <Card.Title>saunje.ge</Card.Title>
                             </Card.Header>
                             <Card.Body className={'text-center'}>
-                                <img src={saunje} alt={"saunje"}/>
+                                <img className={'project-cards-img'} src={saunje} alt={"saunje"}/>
                             </Card.Body>
                         </Card>
                     </a>
