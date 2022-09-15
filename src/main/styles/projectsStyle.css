@@ -1,0 +1,17 @@
+.projects {
+    background: lightgreen;
+}
+
+.projects-card-style {
+    box-shadow: #d7cece -5px -3px 10px 10px;
+    transition: all 1s ease-in-out;
+}
+
+.projects-card-style:hover {
+    transition: 0.7s;
+    scale: 1.1;
+}
+
+img {
+    width: 300px;
+}

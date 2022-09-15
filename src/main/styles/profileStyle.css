@@ -1,0 +1,96 @@
+.profile-img {
+    width: 40%;
+    border:  blue;
+    border-radius: 100%;
+    box-shadow: powderblue 0 0 10px 50px;
+    transition: all 1s ease-in-out;
+    margin-top: 50px;
+}
+
+.profile-img:hover {
+    transition: 1s;
+    box-shadow: greenyellow 0 0 20px 20px;
+}
+
+.Owner-Specialization {
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 1s ease-in-out;
+    font-style: italic;
+    position: relative;
+}
+
+.Owner-Specialization:hover {
+    transition: 1s;
+    background: -webkit-linear-gradient(#ec2525, #ffdd00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+    cursor: default;
+    padding: 10px;
+    margin: 10px;
+}
+
+.knowledge-basket {
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .knowledge-basket {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.knowledge {
+    margin: 5px 0 5px 0;
+    transition: all 1s ease-in-out;
+}
+
+.knowledge:hover {
+    transition: 1s;
+    background-color: #eeeeee;
+    color: #29d5c7;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+.profile-container {
+    background: rgb(193,53,180);
+    background: linear-gradient(40deg, rgba(193,53,180,1) 0%, rgba(0,0,0,1) 51%, rgba(253,29,29,1) 100%);
+}
+
+.visit-card {
+    transition: all 1s ease-in-out;
+}
+
+.visit-card:hover {
+    transition: 1s;
+    background: rgb(255,176,3);
+    background: linear-gradient(40deg, rgba(255,176,3,1) 0%, rgba(255,255,255,1) 51%, rgba(255,196,0,1) 100%);
+    border-radius: 80%;
+}
+
+.accordion-style {
+    padding: 60px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .accordion-style {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:hover {
+    color: red;
+}
