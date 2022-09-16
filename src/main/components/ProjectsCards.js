@@ -3,6 +3,7 @@ import "../styles/projectsStyle.css";
 import GESA from '../images/GESA.png';
 import marksman from "../images/marksman.png";
 import saunje from "../images/saunje.png";
+import movies from "../images/movies.png";
 
 export default function ProjectsCards() {
     return (
@@ -41,6 +42,18 @@ export default function ProjectsCards() {
                             </Card.Header>
                             <Card.Body className={'text-center'}>
                                 <img className={'project-cards-img'} src={saunje} alt={"saunje"}/>
+                            </Card.Body>
+                        </Card>
+                    </a>
+                </Col>
+                <Col sm={12} md={6} lg={4} className={'g-5'}>
+                    <a href={'https://filmebi.netlify.app/'} target={'_blank'} rel={'noreferrer'}>
+                        <Card className={'projects-card-style'}>
+                            <Card.Header>
+                                <Card.Title>*Training - Movies</Card.Title>
+                            </Card.Header>
+                            <Card.Body className={'text-center'}>
+                                <img className={'project-cards-img'} src={movies} alt={"movies"}/>
                             </Card.Body>
                         </Card>
                     </a>
