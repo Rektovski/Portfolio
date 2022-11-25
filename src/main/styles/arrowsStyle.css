@@ -1,0 +1,34 @@
+.ArrowDown {
+    position: fixed;
+    right: 10px;
+    top: 75%;
+    border: 0;
+    color: whitesmoke;
+    background: darkslategrey;
+    transition: 1s all ease-in-out;
+}
+
+.ArrowDown:hover {
+    color: darkslategrey;
+    background: #29d5c7;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.ArrowUp {
+    position: fixed;
+    right: 10px;
+    top: 15%;
+    border: 0;
+    color: whitesmoke;
+    background: darkslategrey;
+    transition: 1s all ease-in-out;
+}
+
+.ArrowUp:hover {
+    color: darkslategrey;
+    background: #29d5c7;
+    transition: .5s;
+    border-radius: 10px;
+}
+

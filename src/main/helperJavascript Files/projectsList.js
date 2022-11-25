@@ -1,10 +1,10 @@
-import gesa from "../../images/GESA.png";
-import movies from "../../images/movies.png";
-import saunje from "../../images/saunje.png";
-import marksman from "../../images/marksman.png";
-import weather from "../../images/weather.gif";
+import gesa from "../images/GESA.png";
+import movies from "../images/movies.png";
+import saunje from "../images/saunje.png";
+import marksman from "../images/marksman.png";
+import weather from "../images/weather.gif";
 
-export const projects = [
+export const projectsList = [
     {
         "name": "gesa",
         "link": "https://geuropeanstudeisassosication.netlify.app/",

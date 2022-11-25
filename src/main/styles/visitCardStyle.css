@@ -1,19 +1,9 @@
 .contactCard {
-    place-items: center;
-    align-items: center;
     margin: 20px 0 20px 0;
 }
 
-.helicopterHelicopter {
-    transition: all 1s ease-in-out;
-}
-
-.helicopterHelicopter:hover {
-    transition: 1s;
-    transform: rotateX(360deg);
-}
-
-.social-icons1 .social-icons2 {
+.social-icons1, .social-icons2, .social-icons3{
+    backface-visibility: hidden;
     transition: all 1s ease-in-out;
 }
 
@@ -35,7 +25,58 @@
     box-shadow: white 0 0 10px 10px;
 }
 
-.copy-icon:hover {
-    background: #d4ddde;
+.social-icons3:hover {
+    transform: scale(1.3);
+    transition: 1s;
+    color: #009bff;
+    background: rgb(255, 255, 255);
     border-radius: 10px;
+    box-shadow: white 0 0 10px 10px;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 200px;
+    height: 150px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+    transition: 3s;
+    -webkit-transform: rotate3d(2,0, 1, 360deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+    vertical-align: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(222,184,135,1) 49%, rgba(255,255,255,1) 100%);
+    color: #e8dede;
+}
+
+/* Style the back side */
+.flip-box-back {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(222,184,135,1) 49%, rgba(255,255,255,1) 100%);
+    color: transparent;
+    transform: rotateY(180deg);
 }

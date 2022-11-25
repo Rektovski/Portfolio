@@ -1,22 +1,14 @@
-import {Button, Col, Container, Row} from "react-bootstrap";
-import "../../styles/projectsStyle.css";
-import {projects} from "./projects";
-import {AiOutlineArrowDown as ArrowDownIcon, AiOutlineArrowUp as ArrowUpIcon} from "react-icons/ai";
+import {Col, Container, Row} from "react-bootstrap";
+import "../styles/projectsStyle.css";
+import {projectsList} from "../helperJavascript Files/projectsList";
 
 export default function Projects() {
     return (
         <Container fluid className={'p-5 projects'} id={"projects"}>
-            <div className={'text-center'}>
-                <a href={'#hero'}>
-                    <Button className={'toTheProjects'}>
-                        <ArrowUpIcon size={40}/>
-                    </Button>
-                </a>
-            </div>
             <h3>Projects 2022 - Junior Starter Kit</h3>
             <Row>
                 {
-                    projects.map((item, id) => (
+                    projectsList.map((item, id) => (
                         <Col key={id} sm={12} md={6} lg={6} className={'g-5'}>
                             <a href={item.link} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'projects-card-style'}>
@@ -30,13 +22,7 @@ export default function Projects() {
                     ))
                 }
             </Row>
-            <div className={'mt-5 text-center'}>
-                <a href={'#contacts'}>
-                    <Button className={'toTheProjects'}>
-                        <ArrowDownIcon size={40}/>
-                    </Button>
-                </a>
-            </div>
+
         </Container>
     )
 }

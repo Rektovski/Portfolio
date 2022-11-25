@@ -1,12 +1,44 @@
 import "../../styles/contactsStyle.css";
-import {Button, Col, Container, Form, Row, Spinner} from "react-bootstrap";
+import {Alert, Col, Container, Form, Row, Spinner} from "react-bootstrap";
 import emailjs from "emailjs-com";
-import {useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import VisitCard from "./VisitCard";
-import {AiOutlineArrowUp as ArrowUpIcon} from "react-icons/ai";
+import ReactCanvasConfetti from "react-canvas-confetti";
+
+//********************FOR
+//********************CONFETTI
+//********************EFFECT
+function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+const canvasStyles = {
+    position: "fixed",
+    pointerEvents: "none",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    left: 0
+};
+
+function getAnimationSettings(originXA, originXB) {
+    return {
+        startVelocity: 30,
+        spread: 360,
+        ticks: 60,
+        zIndex: 0,
+        particleCount: 150,
+        origin: {
+            x: randomInRange(originXA, originXB),
+            y: Math.random() - 0.2
+        }
+    };
+}
 
 export default function Contacts() {
     const [loading, setLoading] = useState(false);
+    const [alertDanger, setAlertDanger] = useState(false);
+    const [alertSuccess, setAlertSuccess] = useState(false);
 
     const form = useRef();
 
@@ -14,31 +46,124 @@ export default function Contacts() {
         e.preventDefault();
         // if form is not filled it will not be sent by default because we use "required"
         // in all input brackets
-        setLoading(true);
-        await emailjs
-            .sendForm(
-                'service_tmxa0dr',
-                'template_yaeyoff',
-                form.current,
-                'Y-w-i3WhQ1WOF33bv')
-            .then(result => console.log(result.text))
-            .catch(error => console.log(error.text));
-        setLoading(false);
+        if (localStorage.getItem("dateSaver") === null || localStorage.getItem("dateSaver") === undefined) {
+            let temp = new Date();
+            let dateUserSubmittedForm = new Date(temp.getTime()); // 1999-01-01 for example
+            localStorage.setItem("dateSaver", dateUserSubmittedForm.toString().split(" ")[0]);
+
+            // We did not meet each other before so you can send me email
+            setLoading(true);
+            await emailjs
+                .sendForm(
+                    'service_tmxa0dr',
+                    'template_yaeyoff',
+                    form.current,
+                    'Y-w-i3WhQ1WOF33bv')
+                .then(result => console.log(result.text))
+                .catch(error => console.log(error.text + "EmailJS, Invalid Form/Connection Lost/Connection Drop"));
+            setLoading(false);
+            startAnimation(); // happy animation
+            setAlertSuccess(true);
+
+            // now we need alert counter to hide it for example after 3 seconds...
+            setTimeout(() => {
+                setAlertSuccess(false);
+            }, 5000);
+        } else {
+            let temp1 = new Date();
+            // today
+            let dateUserSubmittedForm = new Date(temp1.getTime()).toString().split(" ")[0];
+            // 1999-01-01 for example
+            // yesterday or any past date.
+            temp1 = localStorage.getItem("dateSaver"); //
+
+            if (dateUserSubmittedForm && temp1 && (dateUserSubmittedForm !== temp1)) {
+                setLoading(true);
+                await emailjs
+                    .sendForm(
+                        'service_tmxa0dr',
+                        'template_yaeyoff',
+                        form.current,
+                        'Y-w-i3WhQ1WOF33bv')
+                    .then(result => console.log(result.text))
+                    .catch(error => console.log(error.text + "EmailJS, Invalid Form/Connection Lost/Connection Drop"));
+                setLoading(false);
+                startAnimation(); // happy animation
+
+                // For securing ourselves from duplicating or deformatting data
+                localStorage.removeItem("dateSaver");
+
+                let temp = new Date();
+                let today = new Date(temp.getDate());
+                // Saving in the browser new date.
+                localStorage.setItem("dateSaver", today.toString().split(" ")[0]);
+
+                // Now we need alert of success. Something like... :)
+                setAlertSuccess(true);
+
+                // now we need alert counter to hide it for example after 3 seconds...
+                setTimeout(() => {
+                    setAlertSuccess(false);
+                }, 5000);
+            } else {
+                // user tried to send me messages more than 1 time.
+                setAlertDanger(true);
+
+                // now we need alert counter to hide it for example after 3 seconds...
+                setTimeout(() => {
+                    setAlertDanger(false);
+                }, 5000);
+            }
+        }
+
+
         e.target.reset();
     };
 
+    // ***********************
+    // ******CONFETTI*********
+    // **************EFFECT***
+    // ***********************
+    const refAnimationInstance = useRef(null);
+    const [intervalId, setIntervalId] = useState();
+
+    const getInstance = useCallback((instance) => {
+        refAnimationInstance.current = instance;
+    }, []);
+
+    const nextTickAnimation = useCallback(() => {
+        if (refAnimationInstance.current) {
+            refAnimationInstance.current(getAnimationSettings(0.1, 0.3));
+            refAnimationInstance.current(getAnimationSettings(0.7, 0.9));
+        }
+    }, []);
+
+    const startAnimation = useCallback(() => {
+        if (!intervalId) {
+            setIntervalId(setInterval(nextTickAnimation, 400));
+            setTimeout(() => {
+                clearInterval(intervalId);
+                setIntervalId(null);
+            }, 400);
+        }
+    }, [intervalId, nextTickAnimation]);
+
+    useEffect(() => {
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [intervalId]);
+    // ***********************
+    // ***********************
+    // ***********************
+    // ***********************
+
     return (
         <Container>
-            <div className={'mt-5 text-center'}>
-                <a href={'#projects'}>
-                    <Button className={'toTheProjects'}>
-                        <ArrowUpIcon size={40}/>
-                    </Button>
-                </a>
-            </div>
             <Row className={'d-flex justify-content-around'}>
                 <Col sm={12} md={12} lg={8}>
                     <Form ref={form} onSubmit={sendEmail} className={'contactForm border rounded m-3 p-3'}>
+                        <h1 className={'font-monospace text-center'}>You can send me email via this form. Don't be scared... it will not bite... until... 😎</h1>
                         <div className={''}>
                             <div className={'me-5'}>
                                 <Form.Group className="mb-3">
@@ -66,23 +191,45 @@ export default function Contacts() {
                             </div>
                         </div>
 
+                        {
+                            alertDanger ?
+                                <Alert key={"danger"} variant={"danger"}>
+                                    <Alert.Heading>Excuse me.. Come back tomorrow.</Alert.Heading>
+                                    I can't take more than 1 email per day from you.
+                                </Alert>
+                                : ""
+                        }
+
+                        {
+                            alertSuccess ?
+                                <Alert key={"success"} variant={"success"}>
+                                    <Alert.Heading>Nice to hear you.</Alert.Heading>
+                                    I'll check your e-mail in 10 working days. See you soon ❤️
+                                </Alert>
+                                : ""
+                        }
+
                         <div className={'d-flex'}>
                             <div className={'flex-fill'}></div>
-
-
-
                             {
                                 loading ?
                                     <div className={"d-flex align-items-center"}>
-                                        <Spinner style={{color: "lightgray"}} animation="grow" role="status"></Spinner>
+                                        <Spinner style={{color: "lightgray"}} className={'me-2'} animation="grow"
+                                                 role="status"></Spinner>
                                         <span className="">Loading...</span>
                                     </div>
                                     :
-                                    <Button variant="primary" type="submit" value={"send"}>
-                                        Submit
-                                    </Button>
+                                    <>
+                                        <button className={'submitHoorayButton'}>Send Message</button>
+                                        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>
+                                    </>
                             }
                         </div>
+                        <button onClick={() => {
+                            localStorage.removeItem("dateSaver")
+                        }}>
+                            clear local storage
+                        </button>
                     </Form>
                 </Col>
 

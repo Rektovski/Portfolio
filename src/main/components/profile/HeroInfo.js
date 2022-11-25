@@ -1,6 +1,4 @@
 import "../../styles/profileStyle.css";
-import {AiOutlineArrowDown as ArrowDownIcon} from "react-icons/ai";
-import {Button} from "react-bootstrap";
 
 export default function HeroInfo() {
     return (
@@ -51,15 +49,6 @@ export default function HeroInfo() {
                         </div>
                     </div>
                 </div>
-                <div className={'mt-5 text-center'}>
-                    <a href={'#projects'}>
-                        <Button className={'toTheProjects'}>
-                            <ArrowDownIcon size={40}/>
-                        </Button>
-                    </a>
-                </div>
-
-
             </div>
         </>
     )

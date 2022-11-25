@@ -1,12 +1,13 @@
 import "../../styles/profileStyle.css";
 import {Col, Container, Row} from "react-bootstrap";
-import {Component} from "react";
 import HeroInfo from "./HeroInfo";
+import Arrows from "../Arrows";
 
-export default class Profile extends Component {
-    render() {
-        return (
-            <Container fluid className={'profile-container'} id={"hero"}>
+export default function Profile() {
+    return (
+        <>
+            <Container fluid className={'profile-container'} id={"profile"}>
+                <Arrows/>
                 <Row className={' text-center align-items-center p-3'}>
                     <Col sm={12} lg={6}>
                         <h1 className={'Owner-Specialization'}>Mr. Otar Murmanishvili</h1>
@@ -17,6 +18,6 @@ export default class Profile extends Component {
 
                 <HeroInfo/>
             </Container>
-        )
-    }
+        </>
+    )
 }
