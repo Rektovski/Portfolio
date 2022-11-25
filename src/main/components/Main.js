@@ -1,13 +1,13 @@
-import Profile from "./Profile";
-import ProjectsCards from "./ProjectsCards";
+import Profile from "./profile/Profile";
+import Projects from "./ProjectsList/Projects";
 import Footer from "./Footer";
-import Contacts from "./Contacts";
+import Contacts from "./contacts/Contacts";
 
 export default function Main() {
     return (
         <>
             <Profile/>
-            <ProjectsCards/>
+            <Projects/>
             <Contacts/>
             <Footer/>
         </>

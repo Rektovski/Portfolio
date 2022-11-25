@@ -3,7 +3,7 @@ import {AiFillFacebook as Facebook,
     // AiOutlineCopy as Copy,
     AiFillLinkedin as LinkedIn
 } from "react-icons/ai";
-import "../styles/visitCardStyle.css";
+import "../../styles/visitCardStyle.css";
 
 export default function VisitCard() {
     // const mail = "murmanishvili94@gmail.com";

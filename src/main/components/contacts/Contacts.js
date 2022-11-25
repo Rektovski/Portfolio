@@ -1,8 +1,9 @@
-import "../styles/contactsStyle.css";
+import "../../styles/contactsStyle.css";
 import {Button, Col, Container, Form, Row, Spinner} from "react-bootstrap";
 import emailjs from "emailjs-com";
 import {useRef, useState} from "react";
 import VisitCard from "./VisitCard";
+import {AiOutlineArrowUp as ArrowUpIcon} from "react-icons/ai";
 
 export default function Contacts() {
     const [loading, setLoading] = useState(false);
@@ -28,6 +29,13 @@ export default function Contacts() {
 
     return (
         <Container>
+            <div className={'mt-5 text-center'}>
+                <a href={'#projects'}>
+                    <Button className={'toTheProjects'}>
+                        <ArrowUpIcon size={40}/>
+                    </Button>
+                </a>
+            </div>
             <Row className={'d-flex justify-content-around'}>
                 <Col sm={12} md={12} lg={8}>
                     <Form ref={form} onSubmit={sendEmail} className={'contactForm border rounded m-3 p-3'}>

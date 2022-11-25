@@ -3,21 +3,34 @@
 }
 
 .projects-card-style {
-    box-shadow: #d7cece -5px -3px 10px 10px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    box-shadow: #d7cece 0 0 100px 5px;
     transition: all 1s ease-in-out;
 }
 
 .projects-card-style:hover {
     transition: 0.7s;
-    box-shadow: #d7cece -2px -1px 5px 5px;
+    box-shadow: 0 0 0 0;
     scale: 1.1;
     z-index: 1;
 }
 
-/*img {*/
-/*    width: 300px;*/
-/*}*/
-
 .project-cards-img {
-    width: 20vw;
+    background-color: black;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.project-cards-img:hover {
+    padding: 0;
+    transition: 0.7s;
+}
+
+.projectName {
+    text-align: center;
+    font-size: 2rem;
+    background-color: whitesmoke;
 }
