@@ -159,11 +159,17 @@ export default function Contacts() {
     // ***********************
 
     return (
-        <Container>
+        <Container id={"contacts"} >
             <Row className={'d-flex justify-content-around'}>
                 <Col sm={12} md={12} lg={8}>
                     <Form ref={form} onSubmit={sendEmail} className={'contactForm border rounded m-3 p-3'}>
-                        <h1 className={'font-monospace text-center'}>You can send me email via this form. Don't be scared... it will not bite... until... 😎</h1>
+                        <h1 className={'font-monospace text-center'}>
+                            <div>Email Form:</div>
+                        </h1>
+                        <h4>
+                            <div>You can send 1 mail per day. Just some security steps... 😎</div>
+                            <div>Be aware with your choice!</div>
+                        </h4>
                         <div className={''}>
                             <div className={'me-5'}>
                                 <Form.Group className="mb-3">

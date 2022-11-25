@@ -9,7 +9,7 @@ export default function Projects() {
             <Row>
                 {
                     projectsList.map((item, id) => (
-                        <Col key={id} sm={12} md={6} lg={6} className={'g-5'}>
+                        <Col key={id} sm={12} md={6} lg={5} className={'g-5'}>
                             <a href={item.link} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'projects-card-style'}>
                                     <div className={'projectName font-monospace'}>{item.name}</div>
@@ -22,7 +22,6 @@ export default function Projects() {
                     ))
                 }
             </Row>
-
         </Container>
     )
 }

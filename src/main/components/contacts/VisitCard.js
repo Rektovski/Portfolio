@@ -15,7 +15,7 @@ export default function VisitCard() {
 
     return (
         <>
-            <div id={"contacts"} className={'contactCard'}>
+            <div className={'contactCard'}>
                 <div className={'helicopterHelicopter'}>
                     {/*<div className={'d-flex justify-content-around align-items-center'}>*/}
                     {/*    <div>*/}

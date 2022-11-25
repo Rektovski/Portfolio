@@ -8,7 +8,7 @@ export default function Profile() {
         <>
             <Container fluid className={'profile-container'} id={"profile"}>
                 <Arrows/>
-                <Row className={' text-center align-items-center p-3'}>
+                <Row className={'text-center align-items-center p-3'}>
                     <Col sm={12} lg={6}>
                         <h1 className={'Owner-Specialization'}>Mr. Otar Murmanishvili</h1>
                         <h3 className={'Owner-Specialization'}>Junior Front-End Developer</h3>
