@@ -231,11 +231,6 @@ export default function Contacts() {
                                     </>
                             }
                         </div>
-                        <button onClick={() => {
-                            localStorage.removeItem("dateSaver")
-                        }}>
-                            clear local storage
-                        </button>
                     </Form>
                 </Col>
 
