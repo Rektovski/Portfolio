@@ -50,7 +50,7 @@
 }
 
 .profile-container {
-    background-image: url("profile-picture-2.jpg");
+    background-image: url("background.webp");
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 100vh; /* You must set a specified height */
     background-position: center; /* Center the image */
