@@ -38,6 +38,7 @@
     background-color: transparent;
     width: 200px;
     height: 150px;
+    transform: rotateX(-20deg) rotateY(11deg) rotateZ(33deg);
 }
 
 /* This container is needed to position the front and back side */
@@ -53,7 +54,6 @@
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
     transition: 3s;
-    -webkit-transform: rotate3d(2,0, 1, 360deg);
 }
 
 /* Position the front and back side */

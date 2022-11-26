@@ -1,8 +1,11 @@
 import Main from "./main/components/Main";
+import "./App.css";
 
 function App() {
     return (
-        <Main/>
+        <div className={'App'}>
+            <Main/>
+        </div>
     );
 }
 

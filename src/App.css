@@ -1,0 +1,14 @@
+.App {
+    cursor: default;
+    font-family: monospace;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #324d5d;
+}
+
+a:hover {
+    color: firebrick;
+}
