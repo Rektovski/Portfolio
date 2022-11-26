@@ -7,7 +7,7 @@
 
 .typerText {
     font-size: 20px;
-    background: -webkit-linear-gradient(#ec2525, #ffdd00);
+    background: -webkit-linear-gradient(#ffffff, #4deed5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 1s ease-in-out;
@@ -16,7 +16,6 @@
 
 .typerText:hover {
     transition: 1s;
-    background: -webkit-linear-gradient(#7ee808, #0f08e8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: default;

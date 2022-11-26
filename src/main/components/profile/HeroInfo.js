@@ -10,12 +10,16 @@ export default function HeroInfo() {
                     <Col className={'heroInfoCard m-4 text-center'}>
                         <h2>Hard Skills</h2>
                         <div>
-                            <div className={'knowledge'}>C++</div>
-                            <div className={'knowledge'}>Matlab</div>
-                            <div className={'knowledge'}>HTML/JS/CSS</div>
-                            <div className={'knowledge'}>React.js</div>
-                            <div className={'knowledge'}>Bootstrap</div>
-                            <div className={'knowledge'}>React-Bootstrap</div>
+                            <div className={'d-flex justify-content-between'}>
+                                <div className={'knowledge'}>C++</div>
+                                <div className={'knowledge'}>Matlab</div>
+                                <div className={'knowledge'}>HTML/JS/CSS</div>
+                            </div>
+                            <div className={'d-flex justify-content-between'}>
+                                <div className={'knowledge'}>React.js</div>
+                                <div className={'knowledge'}>Bootstrap</div>
+                                <div className={'knowledge'}>React-Bootstrap</div>
+                            </div>
                         </div>
                     </Col>
 

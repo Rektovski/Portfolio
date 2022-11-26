@@ -2,7 +2,7 @@ import gesa from "../images/GESA.png";
 import movies from "../images/movies.png";
 import saunje from "../images/saunje.png";
 import marksman from "../images/marksman.png";
-import weather from "../images/weather.gif";
+import weather from "../images/weather.png";
 
 export const projectsList = [
     {
