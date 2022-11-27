@@ -3,6 +3,7 @@ import movies from "../images/movies.png";
 import saunje from "../images/saunje.png";
 import marksman from "../images/marksman.png";
 import weather from "../images/weather.png";
+import shop from "../images/shop.png";
 
 export const projectsList = [
     {
@@ -33,6 +34,12 @@ export const projectsList = [
         "name": "Weather API",
         "link": "https://weatherotara.netlify.app/",
         "image": weather,
+        "alt": "foto of project"
+    },
+    {
+        "name": "Shop API",
+        "link": "https://shopotara.netlify.app/",
+        "image": shop,
         "alt": "foto of project"
     }
 ]
