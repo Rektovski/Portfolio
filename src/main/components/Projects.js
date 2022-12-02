@@ -3,13 +3,14 @@ import "../styles/projectsStyle.css";
 import {projectsList} from "../helperJavascript Files/projectsList";
 
 export default function Projects() {
+    const projects = projectsList.reverse();
     return (
         <Container fluid className={'p-5 projects'} id={"projects"}>
             <h3>Projects 2022 - Junior Starter Kit</h3>
             <Row>
                 {
-                    projectsList.map((item, id) => (
-                        <Col key={id} sm={12} md={6} lg={5} className={'g-5'}>
+                    projects.map((item, id) => (
+                        <Col key={id} sm={12} md={6} lg={4} xl={4} xxl={3} className={'g-5'}>
                             <a href={item.link} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'projects-card-style'}>
                                     <div className={'projectName font-monospace'}>{item.name}</div>

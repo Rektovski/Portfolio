@@ -4,6 +4,8 @@ import saunje from "../images/saunje.png";
 import marksman from "../images/marksman.png";
 import weather from "../images/weather.png";
 import shop from "../images/shop.png";
+import lawyer from "../images/lawyer.png";
+import legion from "../images/legion.png";
 
 export const projectsList = [
     {
@@ -41,5 +43,17 @@ export const projectsList = [
         "link": "https://shopotara.netlify.app/",
         "image": shop,
         "alt": "foto of project"
-    }
+    },
+    {
+        "name": "Lawyer Project",
+        "link": "https://lawyerotara.netlify.app/",
+        "image": lawyer,
+        "alt": "foto of project"
+    },
+    {
+        "name": "Legion",
+        "link": "https://legioneriotara.netlify.app/",
+        "image": legion,
+        "alt": "foto of project"
+    },
 ]
