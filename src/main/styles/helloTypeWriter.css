@@ -45,7 +45,7 @@
 }
 
 .css-typing p:nth-child(2) {
-    width: 26ch;
+    width: 27ch;
     opacity: 0;
     -webkit-animation: type2 2s steps(40, end);
     animation: type2 2s steps(40, end);
