@@ -1,12 +1,13 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import Main from "./main/components/Main";
 import "./App.css";
 
-function App() {
+export default function App() {
     return (
-        <div className={'App'}>
-            <Main/>
-        </div>
+        <ChakraProvider>
+            <div className={'App '}>
+                <Main/>
+            </div>
+        </ChakraProvider>
     );
 }
-
-export default App;

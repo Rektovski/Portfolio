@@ -1,233 +1,132 @@
 import "../../styles/contactsStyle.css";
 import {Alert, Col, Container, Form, Row, Spinner} from "react-bootstrap";
-import emailjs from "emailjs-com";
-import React, {useCallback, useEffect, useRef, useState} from "react";
+import React, {useState} from "react";
 import VisitCard from "./VisitCard";
-import ReactCanvasConfetti from "react-canvas-confetti";
-
-//********************FOR
-//********************CONFETTI
-//********************EFFECT
-function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
-const canvasStyles = {
-    position: "fixed",
-    pointerEvents: "none",
-    width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0
-};
-
-function getAnimationSettings(originXA, originXB) {
-    return {
-        startVelocity: 30,
-        spread: 360,
-        ticks: 60,
-        zIndex: 0,
-        particleCount: 150,
-        origin: {
-            x: randomInRange(originXA, originXB),
-            y: Math.random() - 0.2
-        }
-    };
-}
+import {
+    Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody,
+    ModalCloseButton, Button, FormControl, FormLabel, useDisclosure, Input
+} from '@chakra-ui/react'
+import {FiSend as SendIcon} from "react-icons/fi";
+import {HiOutlineMail as EmailIcon} from "react-icons/hi"
 
 export default function Contacts() {
     const [loading, setLoading] = useState(false);
-    const [alertDanger, setAlertDanger] = useState(false);
     const [alertSuccess, setAlertSuccess] = useState(false);
+    const {isOpen, onOpen, onClose} = useDisclosure();
+    const [subject, setSubject] = useState("");
+    const [email, setEmail] = useState("");
+    const [text, setText] = useState("");
 
-    const form = useRef();
 
-    const sendEmail = async (e) => {
-        e.preventDefault();
-        // if form is not filled it will not be sent by default because we use "required"
-        // in all input brackets
-        if (localStorage.getItem("dateSaver") === null || localStorage.getItem("dateSaver") === undefined) {
-            let temp = new Date();
-            let dateUserSubmittedForm = new Date(temp.getTime()); // 1999-01-01 for example
-            localStorage.setItem("dateSaver", dateUserSubmittedForm.toString().split(" ")[0]);
+    const initialRef = React.useRef(null)
+    const finalRef = React.useRef(null)
 
-            // We did not meet each other before so you can send me email
+    const sendEmail = async () => {
+        if (subject !== "" && email !== "" && text !== "") {
+
+            console.log("OK");
             setLoading(true);
-            await emailjs
-                .sendForm(
-                    'service_tmxa0dr',
-                    'template_yaeyoff',
-                    form.current,
-                    'Y-w-i3WhQ1WOF33bv')
-                .then(result => console.log(result.text))
-                .catch(error => console.log(error.text + "EmailJS, Invalid Form/Connection Lost/Connection Drop"));
-            setLoading(false);
-            startAnimation(); // happy animation
             setAlertSuccess(true);
-
-            // now we need alert counter to hide it for example after 3 seconds...
             setTimeout(() => {
                 setAlertSuccess(false);
-            }, 5000);
-        } else {
-            let temp1 = new Date();
-            // today
-            let dateUserSubmittedForm = new Date(temp1.getTime()).toString().split(" ")[0];
-            // 1999-01-01 for example
-            // yesterday or any past date.
-            temp1 = localStorage.getItem("dateSaver"); //
-
-            if (dateUserSubmittedForm && temp1 && (dateUserSubmittedForm !== temp1)) {
-                setLoading(true);
-                await emailjs
-                    .sendForm(
-                        'service_tmxa0dr',
-                        'template_yaeyoff',
-                        form.current,
-                        'Y-w-i3WhQ1WOF33bv')
-                    .then(result => console.log(result.text))
-                    .catch(error => console.log(error.text + "EmailJS, Invalid Form/Connection Lost/Connection Drop"));
-                setLoading(false);
-                startAnimation(); // happy animation
-
-                // For securing ourselves from duplicating or deformatting data
-                localStorage.removeItem("dateSaver");
-
-                let temp = new Date();
-                let today = new Date(temp.getDate());
-                // Saving in the browser new date.
-                localStorage.setItem("dateSaver", today.toString().split(" ")[0]);
-
-                // Now we need alert of success. Something like... :)
-                setAlertSuccess(true);
-
-                // now we need alert counter to hide it for example after 3 seconds...
-                setTimeout(() => {
-                    setAlertSuccess(false);
-                }, 5000);
-            } else {
-                // user tried to send me messages more than 1 time.
-                setAlertDanger(true);
-
-                // now we need alert counter to hide it for example after 3 seconds...
-                setTimeout(() => {
-                    setAlertDanger(false);
-                }, 5000);
-            }
+                setSubject("");
+                setEmail("");
+                setText("");
+            }, 3000);
         }
-
-
-        e.target.reset();
     };
 
-    // ***********************
-    // ******CONFETTI*********
-    // **************EFFECT***
-    // ***********************
-    const refAnimationInstance = useRef(null);
-    const [intervalId, setIntervalId] = useState();
-
-    const getInstance = useCallback((instance) => {
-        refAnimationInstance.current = instance;
-    }, []);
-
-    const nextTickAnimation = useCallback(() => {
-        if (refAnimationInstance.current) {
-            refAnimationInstance.current(getAnimationSettings(0.1, 0.3));
-            refAnimationInstance.current(getAnimationSettings(0.7, 0.9));
-        }
-    }, []);
-
-    const startAnimation = useCallback(() => {
-        if (!intervalId) {
-            setIntervalId(setInterval(nextTickAnimation, 400));
-            setTimeout(() => {
-                clearInterval(intervalId);
-                setIntervalId(null);
-            }, 400);
-        }
-    }, [intervalId, nextTickAnimation]);
-
-    useEffect(() => {
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, [intervalId]);
-    // ***********************
-    // ***********************
-    // ***********************
-    // ***********************
-
     return (
-        <Container id={"contacts"} >
+        <Container id={"contacts"}>
             <Row className={'d-flex justify-content-around'}>
                 <Col sm={12} md={12} lg={8}>
-                    <Form ref={form} onSubmit={sendEmail} className={'contactForm border rounded m-3 p-3'}>
-                        <h1 className={'text-center'}>
-                            Contact:
-                        </h1>
-                        <div className={''}>
-                            <div className={'me-5'}>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Name:</Form.Label>
-                                    <Form.Control type="text" name={"name"} placeholder="Enter name" required/>
-                                </Form.Group>
+                    <Button leftIcon={<EmailIcon size={30}/>} colorScheme='teal' variant='solid' onClick={onOpen}>
+                        Send me email
+                    </Button>
 
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Email:</Form.Label>
-                                    <Form.Control type="email" name={"email"} placeholder="Enter email" required/>
-                                </Form.Group>
+                    <Modal
+                        initialFocusRef={initialRef}
+                        finalFocusRef={finalRef}
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        size={"3xl"}
+                    >
+                        <ModalOverlay/>
+                        <ModalContent>
+                            <ModalHeader>Write you e-mail:</ModalHeader>
+                            <ModalCloseButton/>
+                            <ModalBody>
+                                {
+                                    alertSuccess ?
+                                        <Alert key={"success"} variant={"success"}>
+                                            <Alert.Heading>Nice to hear you.</Alert.Heading>
+                                            I'll check your e-mail in 10 working days. See you soon ❤️
+                                        </Alert>
+                                        : ""
+                                }
+                                <Form onSubmit={sendEmail}
+                                      action={"https://formspree.io/f/mlevqjav"}
+                                      method={"POST"}
+                                >
 
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Subject:</Form.Label>
-                                    <Form.Control type="text" name={"subject"} placeholder="Enter subject" required/>
-                                </Form.Group>
-                            </div>
+                                    <FormControl isRequired={true}>
+                                        <FormLabel>Subject</FormLabel>
+                                        <Input
+                                            onChange={(event) => {
+                                                setSubject(event.target.value)
+                                            }}
+                                            value={subject}
+                                            ref={initialRef} type={'text'} name={'name'}
+                                            placeholder='Enter your subject'
+                                            required/>
+                                    </FormControl>
 
-                            <div>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Text:</Form.Label>
-                                    <Form.Control className={'formTextarea'} type={"textarea"} as={"textarea"}
-                                                  name={"text"} placeholder="Enter text" required/>
-                                </Form.Group>
-                            </div>
-                        </div>
+                                    <FormControl my={4} isRequired={true}>
+                                        <FormLabel>Email</FormLabel>
+                                        <Input
+                                            onChange={(event) => {
+                                                setEmail(event.target.value)
+                                            }}
+                                            value={email} type={'email'} name={'email'} placeholder='Enter your email'
+                                            required/>
+                                    </FormControl>
 
-                        {
-                            alertDanger ?
-                                <Alert key={"danger"} variant={"danger"}>
-                                    <Alert.Heading>Excuse me.. Come back tomorrow.</Alert.Heading>
-                                    I can't take more than 1 email per day from you.
-                                </Alert>
-                                : ""
-                        }
+                                    <FormControl my={4} isRequired={true}>
+                                        <FormLabel>Text</FormLabel>
+                                        <Input
+                                            onChange={(event) => {
+                                                setText(event.target.value)
+                                            }}
+                                            value={text} style={{minHeight: "50px", maxHeight: "150px"}}
+                                            type={'textarea'} name={'textarea'} as={"textarea"}
+                                            placeholder='Enter your text' required/>
+                                    </FormControl>
 
-                        {
-                            alertSuccess ?
-                                <Alert key={"success"} variant={"success"}>
-                                    <Alert.Heading>Nice to hear you.</Alert.Heading>
-                                    I'll check your e-mail in 10 working days. See you soon ❤️
-                                </Alert>
-                                : ""
-                        }
-
-                        <div className={'d-flex'}>
-                            <div className={'flex-fill'}></div>
-                            {
-                                loading ?
-                                    <div className={"d-flex align-items-center"}>
-                                        <Spinner style={{color: "lightgray"}} className={'me-2'} animation="grow"
-                                                 role="status"></Spinner>
-                                        <span className="">Loading...</span>
+                                    <div className={"d-flex justify-content-end"}>
+                                        {
+                                            loading ?
+                                                <div className={"d-flex align-items-center"}>
+                                                    <Spinner style={{color: "lightgray"}} className={'me-2'}
+                                                             animation="grow"
+                                                             role="status"></Spinner>
+                                                    <span className="">Loading...</span>
+                                                </div>
+                                                :
+                                                <>
+                                                    <Button type={'submit'} onSubmit={() => sendEmail()}
+                                                            className={'d-flex align-items-center justify-content-center'}>
+                                                        <div className={'me-3'}>
+                                                            Send
+                                                        </div>
+                                                        <SendIcon color={"blue"} size={30}/>
+                                                    </Button>
+                                                </>
+                                        }
                                     </div>
-                                    :
-                                    <>
-                                        <button className={'submitHoorayButton'}>Send Message</button>
-                                        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>
-                                    </>
-                            }
-                        </div>
-                    </Form>
+                                </Form>
+                            </ModalBody>
+                        </ModalContent>
+                    </Modal>
                 </Col>
 
                 <Col className={'d-flex align-items-center justify-content-center'}>

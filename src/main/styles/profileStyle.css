@@ -1,68 +1,89 @@
-@keyframes pulse {
+.Header {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: whitesmoke;
+    padding: 20px;
+}
+
+@keyframes example3 {
     0% {
-        box-shadow: 0 0 0 0;
+        display: none;
+        opacity: 0;
     }
-    50% {
-        box-shadow: #f14f46 0 0 20px 20px;
+
+    1% {
+        display: block;
+        opacity: 0;
     }
+
     100% {
-        box-shadow: 0 0 0 0;
+        display: block;
+        opacity: 1;
     }
 }
 
-.profile-img {
-    width: 250px;
-    border: blue;
-    border-radius: 100%;
-    animation: pulse 4s infinite;
-    transition: all 1s ease-in-out;
-    margin-top: 50px;
-}
-.profile-img:hover {
+.HeaderImage {
+    position: relative;
     transition: 1s;
-    /*#09d0dc*/
+    animation-duration: 2s;
+    animation-name: example3;
 }
 
-.knowledge-basket {
-    margin-top: 100px;
-}
-
-@media only screen and (max-width: 600px) {
-    .knowledge-basket {
-        margin-left: 20px;
-        margin-right: 20px;
+@media (max-width: 700px) {
+    .Header {
+        display: block;
     }
 }
 
-.knowledge {
-    margin: 5px;
-    padding: 5px;
-    transition: all 1s ease-in-out;
+
+@keyframes example2 {
+    0% {
+        opacity: 0;
+        right: -100%;
+    }
+
+    1% {
+        opacity: 0;
+        right: -99%;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
 }
 
-.knowledge:hover {
+.HeaderText {
+    position: relative;
     transition: 1s;
-    background-color: #eeeeee;
-    color: #29d5c7;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    cursor: default;
+    animation-duration: 2s;
+    animation-name: example2;
+    background: rgb(48, 10, 56);
+    box-shadow: #324d5d 0 0 7px 3px;
 }
 
-.profile-container {
-    background-image: url("background.webp");
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 100vh; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
+.HeaderHello {
+    padding: 5px 15px 100px 5px;
+    font-size: large;
 }
 
-@media only screen and (max-width: 600px) {
-    .accordion-style {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+.HeaderText1 {
+    color: #0c930c;
+}
+
+.HeaderText2 {
+    color: dodgerblue;
+}
+
+.HeaderText3 {
+    color: whitesmoke;
+}
+
+.heroCardSpace {
+    border: 1px solid red;
 }
 
 .heroInfoCard {
@@ -81,4 +102,65 @@
 .cppLink:hover {
     color: #29d5c7;
     transition: .2s;
+}
+
+.KnowledgeCard {
+    transition: all 1s ease-in-out;
+    height: 200px;
+}
+
+.KnowledgeCard:hover {
+    transition: .3s;
+    scale: 1.1;
+}
+
+@keyframes example {
+    from {left: -100%}
+    to {left: 0}
+}
+
+.KnowledgeBoxHeader {
+    position: relative;
+    transition: 1s;
+    animation-duration: 2s;
+    animation-name: example;
+    padding: 20px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+@keyframes example1 {
+    0% {
+        opacity: 0;
+        left: -100%;
+    }
+
+    1% {
+        opacity: 0;
+        left: -99%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.KnowledgeBox {
+    position: relative;
+    transition: 1s;
+    animation-duration: 3s;
+    animation-name: example1;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+
+.profile-container {
+    background-image: url("background.webp");
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

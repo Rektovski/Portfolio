@@ -1,36 +1,22 @@
 .projects {
     background: lightgreen;
+    z-index: 2;
 }
 
-.projects-card-style {
-    border: 1px solid cadetblue;
-    border-radius: 10px;
-    box-shadow: #d7cece 0 0 100px 5px;
+.ProjectsHeader {
+    font-size: xx-large;
+}
+
+
+.ProjectsCard {
     transition: all 1s ease-in-out;
 }
 
-.projects-card-style:hover {
-    transition: 0.7s;
-    box-shadow: 0 0 0 0;
+.ProjectsCard:hover {
+    transition: .3s;
     scale: 1.1;
-    z-index: 1;
 }
 
-.project-cards-img {
-    background-color: black;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-    transition: all 1s ease-in-out;
-}
-
-.project-cards-img:hover {
-    padding: 0;
-    transition: 0.7s;
-}
-
-.projectName {
-    text-align: center;
-    font-size: 2rem;
-    background-color: whitesmoke;
+.ProjectsCardTitle {
+    font-size: x-large;
 }
