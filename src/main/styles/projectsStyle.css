@@ -1,6 +1,6 @@
 .projects {
-    background: lightgreen;
-    z-index: 2;
+    background: rgb(39,53,106);
+    background: linear-gradient(45deg, rgba(39,53,106,1) 0%, rgba(41,212,55,1) 100%);
 }
 
 .ProjectsHeader {
@@ -18,5 +18,8 @@
 }
 
 .ProjectsCardTitle {
+    width: 100%;
+    background: rgb(58,120,180);
+    background: linear-gradient(90deg, rgba(58,120,180,1) 0%, rgba(175,29,253,1) 36%, rgba(252,188,69,1) 100%);
     font-size: x-large;
 }

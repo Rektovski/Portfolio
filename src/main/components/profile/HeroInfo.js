@@ -24,21 +24,17 @@ export default function HeroInfo() {
                 <div className={'HeaderText m-2'}>
 
                     <div className={'bg-dark p-1 d-flex align-items-center justify-content-between'}>
-                        <div className={'p-2 me-5'}><TerminalAddIcon size={20}/></div>
+                        <div className={'p-2 me-5'}><TerminalAddIcon className={'TerminalAdd'} size={20}/></div>
                         <div className={''}>
                             user@host
                         </div>
                         <div className={'d-flex justify-content-center align-items-center'}>
-                            <MinusIcon className={'me-3'}/>
+                            <MinusIcon className={'HeaderMinus me-3'}/>
                             <RectIcon className={'HeaderRectangle me-3'}/>
                             <CloseIcon
-                                onMouseOver={() => {
-                                    if (!closeButtonTextShow) setCloseButtonTextShow(true);
-                                    console.log('1')
-                                }}
+                                onMouseOver={() => {if (!closeButtonTextShow) setCloseButtonTextShow(true)}}
                                 className={'closeButton me-1'}
                             />
-
                         </div>
                     </div>
 

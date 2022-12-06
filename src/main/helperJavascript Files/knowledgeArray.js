@@ -16,6 +16,7 @@ import clion from "../images/heroInfo/clion.png";
 import docker from "../images/heroInfo/docker.png";
 import linux from "../images/heroInfo/linux.png";
 import webstorm from "../images/heroInfo/webstorm.png";
+import github from "../images/heroInfo/github.png";
 
 export const knowledgeArray = [
     {
@@ -91,5 +92,9 @@ export const knowledgeArray = [
     {
         "name": "Docker",
         image: docker
+    },
+    {
+        "name": "Github",
+        image: github
     },
 ]

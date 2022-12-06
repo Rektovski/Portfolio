@@ -1,82 +1,32 @@
-.contactCard {
-    margin: 20px 0 20px 0;
+.VisitCard {
+    height: 200px;
+    background: rgb(0,49,97);
+    background: linear-gradient(45deg, rgba(0,49,97,1) 0%, rgba(251,173,0,1) 45%, rgba(255,219,157,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-icons1, .social-icons2, .social-icons3{
-    backface-visibility: hidden;
+.social-icons1, .social-icons2, .social-icons3 {
     transition: all 1s ease-in-out;
 }
 
+.social-icons1:hover, .social-icons2:hover, .social-icons3:hover {
+    transition: .3s;
+    scale: 1.1;
+}
+
 .social-icons1:hover {
-    transform: scale(1.3);
-    transition: 1s;
-    color: #009bff;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: white 0 0 10px 10px;
+    background: white;
+    color: dodgerblue;
 }
 
 .social-icons2:hover {
-    transform: scale(1.3);
-    transition: 1s;
-    color: #000000;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: white 0 0 10px 10px;
+    background: white;
+    color: darkslategray;
 }
 
 .social-icons3:hover {
-    transform: scale(1.3);
-    transition: 1s;
-    color: #009bff;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: white 0 0 10px 10px;
-}
-
-.flip-box {
-    background-color: transparent;
-    width: 200px;
-    height: 150px;
-    transform: rotateX(-20deg) rotateY(11deg) rotateZ(33deg);
-}
-
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-    transition: 3s;
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-
-/* Style the front side */
-.flip-box-front {
-    vertical-align: center;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(222,184,135,1) 49%, rgba(255,255,255,1) 100%);
-    color: #e8dede;
-}
-
-/* Style the back side */
-.flip-box-back {
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(222,184,135,1) 49%, rgba(255,255,255,1) 100%);
-    color: transparent;
-    transform: rotateY(180deg);
+    background: white;
+    color: dodgerblue;
 }

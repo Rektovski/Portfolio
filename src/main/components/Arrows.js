@@ -26,18 +26,18 @@ export default function Arrows() {
             <a href={`#${category}`} onClick={() => {
                 changeArrayLevelUp(categoryId)
             }}>
-                <button className={'ArrowUp'}>
+                <button className={'ArrowDown'}>
                     <ArrowUpIcon size={40}/>
                 </button>
             </a>
 
-            <a href={`#${category}`} onClick={() => {
-                changeArrayLevelDown(categoryId)
-            }}>
-                <button className={'ArrowDown'}>
-                    <ArrowDownIcon size={40}/>
-                </button>
-            </a>
+                {/*<a href={`#${category}`} onClick={() => {*/}
+                {/*    changeArrayLevelDown(categoryId)*/}
+                {/*}}>*/}
+                {/*    <button className={'ArrowDown'}>*/}
+                {/*        <ArrowDownIcon size={40}/>*/}
+                {/*    </button>*/}
+                {/*</a>*/}
         </>
     )
 }

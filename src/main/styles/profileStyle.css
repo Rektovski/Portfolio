@@ -65,12 +65,49 @@
     box-shadow: #324d5d 0 0 7px 3px;
 }
 
+.HeaderMinus {
+    transition: all 1s ease-in-out;
+    border-radius: 100%;
+}
+
+.HeaderMinus:hover {
+    transition: 1s;
+    background: #4b4949;
+}
+
+.HeaderRectangle {
+    transition: all 1s ease-in-out;
+    border-radius: 25%;
+}
+
+.HeaderRectangle:hover {
+    transition: 1s;
+    background: #4b4949;
+}
+
 .closeButton {
     color: #fc794b;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(252,121,75,1) 100%);
     border-radius: 100px;
     border: none;
+    transition: all 1s ease-in-out;
+}
+
+.closeButton:hover {
+    transition: 1s;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(255, 99, 45) 100%);
+}
+
+.TerminalAdd {
+    transition: all 1s ease-in-out;
+    border-radius: 25%;
+}
+
+.TerminalAdd:hover {
+    transition: 1s;
+    background: #4b4949;
 }
 
 .closeButtonOverlayToolTip {
