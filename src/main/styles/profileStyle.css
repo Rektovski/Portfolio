@@ -65,9 +65,23 @@
     box-shadow: #324d5d 0 0 7px 3px;
 }
 
+.closeButton {
+    color: #fc794b;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(252,121,75,1) 100%);
+    border-radius: 100px;
+    border: none;
+}
+
+.closeButtonOverlayToolTip {
+    z-index: 12;
+}
+
 .HeaderHello {
-    padding: 5px 15px 100px 5px;
-    font-size: large;
+    width: 100%;
+    height: 100%;
+    padding: 5px 15px 20px 5px;
+    font-size: 1rem;
 }
 
 .HeaderText1 {
@@ -155,12 +169,8 @@
     margin: 0 0 40px 0;
 }
 
-
-.profile-container {
-    background-image: url("background.webp");
-    background-color: #cccccc;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.tooltipText {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
