@@ -1,11 +1,12 @@
 .Header {
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: flex-end;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     color: whitesmoke;
     padding: 20px;
+    margin-top: 20px;
 }
 
 @keyframes example3 {
@@ -165,6 +166,10 @@
     scale: 1.1;
 }
 
+.CardFooterText {
+    font-weight: 900;
+}
+
 @keyframes example {
     from {left: -100%}
     to {left: 0}
@@ -198,6 +203,8 @@
 }
 
 .KnowledgeBox {
+    display: flex;
+    align-items: center;
     position: relative;
     transition: 1s;
     animation-duration: 3s;
@@ -210,4 +217,14 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.AchievementsBox {
+    transition: all 1s ease-in-out;
+    background: darkslategray;
+}
+
+.AchievementsBox:hover {
+    transition: 1s;
+    background: #79afaf;
 }

@@ -8,6 +8,8 @@ import {
 } from '@chakra-ui/react'
 import {FiSend as SendIcon} from "react-icons/fi";
 import {HiOutlineMail as EmailIcon} from "react-icons/hi"
+import {BsGoogle as GmailIcon} from "react-icons/bs";
+import {ImLocation as LocationIcon, ImMobile as MobileIcon} from "react-icons/im";
 
 export default function Contacts() {
     const [loading, setLoading] = useState(false);
@@ -38,13 +40,13 @@ export default function Contacts() {
 
     return (
         <Container id={"contacts"}>
-            <Row className={'d-flex justify-content-around'}>
-                <Col sm={12} md={12} lg={8} className={'p-2'}>
+            <Row  className={'d-flex justify-content-around align-items-center'}>
+                <Col sm={12} md={12} lg={8} className={'p-2'} style={{zIndex: 1}}>
                     <div className={'border bg-dark text-light p-4'}>
-                        <div className={'text-center'}>Contact</div>
-                        <div>Gmail: murmanishvili94@gmail.com</div>
-                        <div>Mobile: +995-558-142-959</div>
-                        <div className={'pb-3'}>Tbilisi, Georgia</div>
+                        <div className={'text-center contactHeaderText'}>Contact</div>
+                        <div className={'d-flex align-items-center contactTextVisual'}><GmailIcon className={'me-3'} size={20}/> murmanishvili94@gmail.com</div>
+                        <hr /><div className={'d-flex align-items-center contactTextVisual'}><MobileIcon className={'me-3'} size={20}/> +995-558-142-959</div>
+                        <hr /><div className={'pb-3 d-flex align-items-center contactTextVisual'}><LocationIcon className={'me-3'} size={20}/>Tbilisi, Georgia</div>
                         <div className={'d-flex justify-content-end'}>
                             <Button
                                 className={'p-3'}
@@ -145,7 +147,7 @@ export default function Contacts() {
 
                 </Col>
 
-                <Col className={'p-2'}>
+                <Col className={'p-2'} >
                     <VisitCard/>
                 </Col>
             </Row>

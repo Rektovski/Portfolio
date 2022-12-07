@@ -20,3 +20,14 @@
 .contactForm {
     background: aliceblue;
 }
+
+.contactHeaderText {
+    font-size: 25px;
+    font-family: monospace, Serif;
+}
+
+.contactTextVisual {
+    font-size: 15px;
+    padding: 10px;
+    font-family: monospace, Serif;
+}

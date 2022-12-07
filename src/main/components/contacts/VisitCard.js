@@ -16,9 +16,11 @@ export default function VisitCard() {
 
     return (
         <>
-            <div className={'VisitCard'}>
-                <div>
-                    <div>
+
+            <div className={'VisitCard'} style={{zIndex: 0}}>
+               <div className={'VisitCardHeader'}>Visit Card</div>
+                <div className={'d-flex justify-content-center align-items-center'}>
+                    <div className={'mx-2'}>
                         <a
                             href={'https://www.facebook.com/OtexRektovski/'}
                             target={"_blank"}
@@ -29,7 +31,7 @@ export default function VisitCard() {
                             />
                         </a>
                     </div>
-                    <div>
+                    <div className={'mx-2'}>
                         <a
                             href={'https://github.com/Rektovski'}
                             target={"_blank"}
@@ -40,9 +42,9 @@ export default function VisitCard() {
                             />
                         </a>
                     </div>
-                    <div>
+                    <div className={'mx-2'}>
                         <a
-                            href={'https://www.facebook.com/OtexRektovski/'}
+                            href={'https://www.linkedin.com/in/otarmurmanishvili/'}
                             target={"_blank"}
                             rel={"noreferrer"}
                         >

@@ -17,6 +17,7 @@ import docker from "../images/heroInfo/docker.png";
 import linux from "../images/heroInfo/linux.png";
 import webstorm from "../images/heroInfo/webstorm.png";
 import github from "../images/heroInfo/github.png";
+import figma from "../images/heroInfo/figma.png";
 
 export const knowledgeArray = [
     {
@@ -96,5 +97,9 @@ export const knowledgeArray = [
     {
         "name": "Github",
         image: github
+    },
+    {
+        "name": "Figma",
+        image: figma
     },
 ]
