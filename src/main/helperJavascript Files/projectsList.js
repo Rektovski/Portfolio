@@ -6,6 +6,7 @@ import weather from "../images/weather.png";
 import shop from "../images/shop.png";
 import lawyer from "../images/lawyer.png";
 import legion from "../images/legion.png";
+import bitcamp from "../images/bitcamp.png";
 
 export const projectsList = [
     // {
@@ -54,6 +55,12 @@ export const projectsList = [
         "name": "Legion",
         "link": "https://legioneriotara.netlify.app/",
         "image": legion,
+        "alt": "foto of project"
+    },
+    {
+        "name": "Bitcamp Challenge",
+        "link": "https://bitcamp2022challenges.netlify.app/",
+        "image": bitcamp,
         "alt": "foto of project"
     },
 ]
