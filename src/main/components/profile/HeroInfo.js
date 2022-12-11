@@ -128,27 +128,30 @@ export default function HeroInfo() {
                                 </div>
                             </Col>
                             <Col sm={12} md={12} lg={8} xl={8} xxl={8}>
-                                <Col style={{fontSize: 24}}>Website for programmers to self-exercise
-                                    into the world of algorithms. </Col>
-                                <Col style={{textAlign: "left"}}>
-                                    <div className={'d-flex align-items-center'}>
-                                        <LanguageIcon className={'me-3 '} style={{color: "white"}} size={60}/>
-                                        C++
+                                <div style={{fontSize: 24}}>Website for programmers to self-exercise
+                                    into the world of algorithms. </div>
+                                <div className={'d-flex justify-content-around p-3 text-center'} style={{textAlign: "left"}}>
+                                    <div >
+                                        <div>
+                                            <LanguageIcon  style={{color: "white"}} size={60}/>
+                                        </div>
+                                        <div>
+                                            C++
+                                        </div>
                                     </div>
-                                    <div className={'d-flex align-items-center'}>
-                                        <RankIcon className={'me-3'} size={60}/>
-                                        Top 200.
+                                    <div >
+                                        <RankIcon size={60}/>
+                                        Top 200
                                     </div>
-                                    <div className={'d-flex align-items-center'}
-                                    >
-                                        <UserIcon className={'me-3'} size={60}/>
+                                    <div >
+                                        <UserIcon size={60}/>
                                         <a href={"https://www.eolymp.com/en/users/OtarMurmanishvili"}
                                            target={"_blank"}
                                            rel={"noreferrer"}>
                                             Link
                                         </a>
                                     </div>
-                                </Col>
+                                </div>
                             </Col>
                         </Row>
             </Container>

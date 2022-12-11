@@ -5,7 +5,7 @@ import Arrows from "../Arrows";
 export default function Profile() {
     return (
         <>
-            <div  id={"profile"}>
+            <div id={"profile"}>
                 <HeroInfo/>
                 <Arrows/>
             </div>
