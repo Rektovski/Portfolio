@@ -1,4 +1,4 @@
-import "../../styles/contactsStyle.css";
+import "../../design/contactsStyle.css";
 import {Alert, Col, Container, Form, Row, Spinner} from "react-bootstrap";
 import React, {useState} from "react";
 import VisitCard from "./VisitCard";

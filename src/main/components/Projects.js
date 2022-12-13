@@ -1,5 +1,5 @@
 import {Col, Container, Row} from "react-bootstrap";
-import "../styles/projectsStyle.css";
+import "../design/projectsStyle.css";
 import {projectsList} from "../helperJavascript Files/projectsList";
 
 export default function Projects() {

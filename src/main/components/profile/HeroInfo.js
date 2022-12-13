@@ -1,9 +1,9 @@
-import "../../styles/profileStyle.css";
+import "../../design/profileStyle.css";
 import {CardImg, Col, Container, Row} from "react-bootstrap";
 import {knowledgeArray} from "../../helperJavascript Files/knowledgeArray";
 import {Card, CardBody, CardFooter} from "@chakra-ui/react";
-import profileGif from "../../images/background.webp";
-import eolympLogo from "../../images/eolymp.png";
+import profileGif from "../../assets/background.webp";
+import eolympLogo from "../../assets/eolymp.png";
 import {RiCheckboxBlankLine as RectIcon} from "react-icons/ri";
 import {
     AiFillCloseCircle as CloseIcon,
@@ -120,7 +120,6 @@ export default function HeroInfo() {
                 <div className={'KnowledgeBoxHeader'}>
                     Achievements
                 </div>
-
                         <Row className={'AchievementsBox KnowledgeBox text-center text-light p-2'}>
                             <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
                                 <div className={'d-flex justify-content-center align-items-center bg-info'}>

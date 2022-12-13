@@ -1,4 +1,4 @@
-import "../../styles/profileStyle.css";
+import "../../design/profileStyle.css";
 import HeroInfo from "./HeroInfo";
 import Arrows from "../Arrows";
 

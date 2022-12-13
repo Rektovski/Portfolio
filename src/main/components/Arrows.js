@@ -1,7 +1,7 @@
 import {AiOutlineArrowDown as ArrowDownIcon, AiOutlineArrowUp as ArrowUpIcon} from "react-icons/ai";
 import {useState} from "react";
 import {defaultArrowArray} from "../helperJavascript Files/arrowPosition";
-import "./../styles/arrowsStyle.css";
+import "../design/arrowsStyle.css";
 
 export default function Arrows() {
     const [category, setCategory] = useState(defaultArrowArray[0]);

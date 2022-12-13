@@ -1,20 +1,14 @@
-import gesa from "../images/GESA.png";
-import movies from "../images/movies.png";
-import saunje from "../images/saunje.png";
-import marksman from "../images/marksman.png";
-import weather from "../images/weather.png";
-import shop from "../images/shop.png";
-import lawyer from "../images/lawyer.png";
-import legion from "../images/legion.png";
-import bitcamp from "../images/bitcamp.png";
+import gesa from "../assets/gesa.png";
+import movies from "../assets/movies.png";
+import saunje from "../assets/saunje.png";
+import marksman from "../assets/marksman.png";
+import weather from "../assets/weather.png";
+import shop from "../assets/shop.png";
+import lawyer from "../assets/lawyer.png";
+import legion from "../assets/legion.png";
+import bitcamp from "../assets/bitcamp.png";
 
 export const projectsList = [
-    // {
-    //     "name": "gesa",
-    //     "link": "https://geuropeanstudeisassosication.netlify.app/",
-    //     "image": gesa,
-    //     "alt": "foto of project"
-    // },
     // {
     //     "name": "marksman",
     //     "link": "https://marksmangeorgia.netlify.app/",
@@ -37,6 +31,12 @@ export const projectsList = [
         "name": "Weather API",
         "link": "https://weatherotara.netlify.app/",
         "image": weather,
+        "alt": "foto of project"
+    },
+    {
+        "name": "gesa",
+        "link": "https://geuropeanstudeisassosication.netlify.app/",
+        "image": gesa,
         "alt": "foto of project"
     },
     // {
