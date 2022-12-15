@@ -1,6 +1,6 @@
 import "../../design/profileStyle.css";
 import {CardImg, Col, Container, Row} from "react-bootstrap";
-import {knowledgeArray} from "../../helperJavascript Files/knowledgeArray";
+import {iknowarray, learningNowArray} from "../../helperJavascript Files/knowledgeArray";
 import {Card, CardBody, CardFooter} from "@chakra-ui/react";
 import profileGif from "../../assets/background.webp";
 import eolympLogo from "../../assets/eolymp.png";
@@ -74,7 +74,7 @@ export default function HeroInfo() {
                             <div>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
-                                <span className={"HeaderText3"}>$</span> Full-Stack Junior developer
+                                <span className={"HeaderText3"}>$</span> Junior Front-End developer
                             </div>
                             <div>
                                 <span className={"HeaderText1"}>user@host:</span>
@@ -100,8 +100,25 @@ export default function HeroInfo() {
                     Tech Box
                 </div>
                 <Row style={{maxHeight: 600, overflow: "auto"}} className={'KnowledgeBox bg-dark text-light'}>
+                    <div className={'TechBoxHeader'}>At this moment:</div>
                     {
-                        knowledgeArray.map((item, id) => (
+                        iknowarray.map((item, id) => (
+                            <Col key={id} sm={6} md={4} lg={3} xl={2} xxl={2} className={'g-4'}>
+                                <Card align='center' className={'text-light KnowledgeCard'}>
+                                    <CardBody>
+                                        <CardImg className={'rounded'} style={{width: 70, height: 70}} src={item.image}
+                                                 alt={'tech logos'}/>
+                                    </CardBody>
+                                    <CardFooter className={'CardFooterText text-center'}>
+                                        {item.name}
+                                    </CardFooter>
+                                </Card>
+                            </Col>
+                        ))
+                    }
+                    <div className={'TechBoxHeader'}>Learning now:</div>
+                    {
+                        learningNowArray.map((item, id) => (
                             <Col key={id} sm={6} md={4} lg={3} xl={2} xxl={2} className={'g-4'}>
                                 <Card align='center' className={'text-light KnowledgeCard'}>
                                     <CardBody>

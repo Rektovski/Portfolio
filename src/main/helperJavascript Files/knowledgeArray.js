@@ -19,7 +19,7 @@ import webstorm from "../assets/heroInfo/webstorm.png";
 import github from "../assets/heroInfo/github.png";
 import figma from "../assets/heroInfo/figma.png";
 
-export const knowledgeArray = [
+export const iknowarray = [
     {
         "name": "Linux",
         image: linux
@@ -33,10 +33,6 @@ export const knowledgeArray = [
         image: javascript
     },
     {
-        "name": "Java",
-        image: java
-    },
-    {
         "name": "Matlab",
         image: matlab
     },
@@ -48,7 +44,6 @@ export const knowledgeArray = [
         "name": "HTML",
         image: html
     },
-
     {
         "name": "CSS",
         image: css
@@ -66,25 +61,29 @@ export const knowledgeArray = [
         image: chakraUI
     },
     {
-        "name": "PostgreSQL",
-        image: postgresql
-    },
-    {
-        "name": "SQL",
-        image: sql
-    },
-    {
         "name": "CLion",
         image: clion
-    },
-
-    {
-        "name": "Intelij",
-        image: intelij
     },
     {
         "name": "Webstorm",
         image: webstorm
+    },
+
+    {
+        "name": "Github",
+        image: github
+    },
+    {
+        "name": "Figma",
+        image: figma
+    },
+]
+
+export const learningNowArray = [
+
+    {
+        "name": "Java",
+        image: java
     },
     {
         "name": "Spring Boot",
@@ -94,12 +93,17 @@ export const knowledgeArray = [
         "name": "Docker",
         image: docker
     },
+
     {
-        "name": "Github",
-        image: github
+        "name": "Intelij",
+        image: intelij
     },
     {
-        "name": "Figma",
-        image: figma
+        "name": "PostgreSQL",
+        image: postgresql
+    },
+    {
+        "name": "SQL",
+        image: sql
     },
 ]
