@@ -66,6 +66,16 @@
     box-shadow: #324d5d 0 0 7px 3px;
 }
 
+.HeaderTextMaximized {
+    position: relative;
+    width: 100%;
+    transition: 1s;
+    animation-duration: 2s;
+    animation-name: example2;
+    background: rgb(48, 10, 56);
+    box-shadow: #324d5d 0 0 7px 3px;
+}
+
 .HeaderMinus {
     transition: all 1s ease-in-out;
     border-radius: 100%;
@@ -120,6 +130,11 @@
     height: 100%;
     padding: 5px 15px 20px 5px;
     font-size: 1rem;
+}
+
+.HeaderHelloMinimized {
+    width: 100%;
+    height: 0;
 }
 
 .HeaderText1 {

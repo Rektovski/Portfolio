@@ -17,15 +17,17 @@ import {useState} from "react";
 
 export default function HeroInfo() {
     const [closeButtonTextShow, setCloseButtonTextShow] = useState(false);
+    const [terminalHeight, setTerminalHeight] = useState(false);
+    const [terminalMaximized, setTerminalMaximized] = useState(false);
 
     return (
         <>
             <Container>
                 <div className={'Header'}>
                     <div className={'HeaderImage m-2'}>
-                        <img src={profileGif} alt={'profileGif'}/>
+                        <img  src={profileGif} alt={'profileGif'}/>
                     </div>
-                    <div className={'HeaderText m-2'}>
+                    <div className={`${!terminalMaximized ? "HeaderText" : "HeaderTextMaximized"} m-2`}>
 
                         <div className={'bg-dark p-1 d-flex align-items-center justify-content-between'}>
                             <div className={'p-2 me-5'}><TerminalAddIcon className={'TerminalAdd'} size={20}/></div>
@@ -33,62 +35,63 @@ export default function HeroInfo() {
                                 user@host
                             </div>
                             <div className={'d-flex justify-content-center align-items-center'}>
-                                <MinusIcon className={'HeaderMinus me-3'}/>
-                                <RectIcon className={'HeaderRectangle me-3'}/>
+                                <MinusIcon className={'HeaderMinus mx-3'} onClick={()=>setTerminalHeight(!terminalHeight)} />
+                                <RectIcon className={'HeaderRectangle me-3'} onClick={()=>setTerminalMaximized(!terminalMaximized)}/>
                                 <CloseIcon
-                                    onMouseOver={() => {
-                                        if (!closeButtonTextShow) setCloseButtonTextShow(true)
+                                    onClick={() => {
+                                        setCloseButtonTextShow(!closeButtonTextShow);
                                     }}
                                     className={'closeButton me-1'}
                                 />
                             </div>
                         </div>
 
-                        <div className={'HeaderHello'}>
-                            <div>
+                        <div className={`${!terminalHeight ? "HeaderHello" : "HeaderHelloMinimized"}`} style={terminalHeight ? {height: 0} : {}}>
+                            <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span>
                             </div>
-                            <div>
+                            <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span>
                             </div>
-                            <div>
+                            <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span>
                             </div>
-                            <div className={' align-items-center'}>
+                            <div style={terminalHeight ? {display: 'none'} : {}} className={' align-items-center'}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span> Sudo emoji!
                                 <div className={'d-flex'}><HelloIcon/>..</div>
                             </div>
-                            <div>
+                            <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span> Hello, I'm otto
                             </div>
-                            <div>
+                            <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span> Junior Front-End developer
                             </div>
-                            <div>
+                            <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
                                 <span className={"HeaderText3"}>$</span> Here are my skills and achievements
                             </div>
                             {
                                 closeButtonTextShow ?
-                                    <div>
+                                    <div style={terminalHeight ? {display: 'none'} : {}}>
                                         <span className={"HeaderText1"}>user@host:</span>
                                         <span className={"HeaderText2"}>~</span>
                                         <span className={"HeaderText3"}>$</span> Well, pardon me young man, excuse the
                                         shit
-                                        out of my goddamn French but did you just threaten me!?
+                                        out of my goddamn French but did you just threaten me!? 🧐
+                                        I'm trying ma' best 👨‍💻 to become the beacon of knowledge 🧠 blazing out the black sea of ignorance.
                                     </div>
                                     : ""
                             }
