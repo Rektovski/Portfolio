@@ -84,6 +84,7 @@
 .HeaderMinus:hover {
     transition: 1s;
     background: #4b4949;
+    cursor: pointer;
 }
 
 .HeaderRectangle {
@@ -94,6 +95,7 @@
 .HeaderRectangle:hover {
     transition: 1s;
     background: #4b4949;
+    cursor: pointer;
 }
 
 .closeButton {
@@ -106,6 +108,7 @@
 }
 
 .closeButton:hover {
+    cursor: pointer;
     transition: 1s;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(255, 99, 45) 100%);
