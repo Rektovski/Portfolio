@@ -34,6 +34,7 @@ export default function Contacts() {
                 setSubject("");
                 setEmail("");
                 setText("");
+                setLoading(false);
             }, 3000);
         }
     };
