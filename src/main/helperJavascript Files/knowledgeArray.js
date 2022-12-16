@@ -3,6 +3,7 @@ import matlab from "../assets/heroInfo/Matlab.png";
 import html from "../assets/heroInfo/html.png";
 import javascript from "../assets/heroInfo/javascript.png";
 import css from "../assets/heroInfo/css.png";
+import scss from "../assets/heroInfo/scss.png";
 import bootstrap from "../assets/heroInfo/bootstrap.png";
 import react from "../assets/heroInfo/react.png";
 import reactBootstrap from "../assets/heroInfo/reactbootstrap.Default";
@@ -49,6 +50,10 @@ export const iknowarray = [
         image: css
     },
     {
+        "name": "SCSS",
+        image: scss
+    },
+    {
         "name": "Bootstrap",
         image: bootstrap
     },
@@ -74,6 +79,10 @@ export const iknowarray = [
         image: github
     },
     {
+        "name": "Docker",
+        image: docker
+    },
+    {
         "name": "Figma",
         image: figma
     },
@@ -89,11 +98,6 @@ export const learningNowArray = [
         "name": "Spring Boot",
         image: springBoot
     },
-    {
-        "name": "Docker",
-        image: docker
-    },
-
     {
         "name": "Intelij",
         image: intelij
