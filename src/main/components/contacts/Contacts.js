@@ -26,11 +26,11 @@ export default function Contacts() {
     const sendEmail = async () => {
         if (subject !== "" && email !== "" && text !== "") {
             setSubject("");
-            setEmail("");
-            setText("");
-            setLoading(true);
             setAlertSuccess(true);
             setTimeout(() => {
+                setEmail("");
+                setText("");
+                setLoading(true);
                 setAlertSuccess(false);
                 setLoading(false);
             }, 3000);
