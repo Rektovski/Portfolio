@@ -1,0 +1,48 @@
+@keyframes comeFromBottom {
+    0% {
+        top: 1200px;
+    }
+    50% {
+        top: 600px;
+    }
+    100% {
+        top: 22px;
+    }
+}
+
+.musicPlayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    padding: 5px 5px;
+    border-radius: 22px;
+}
+
+.soundSpace {
+    position: fixed;
+    z-index: 1111;
+    top: 22px;
+    left: 22px;
+    animation: 2s comeFromBottom forwards;
+
+    background: rgb(234, 223, 223);
+    border-radius: 20px;
+}
+
+.soundSpace:hover {
+    transition: .3s;
+    background: rgb(183, 0, 118);
+}
+
+.musicPlayerIcons {
+    transition: all .3s ease-in-out;
+    border-radius: 100%;
+}
+
+.musicPlayerIcons:hover {
+    transition: .3s;
+    cursor: pointer;
+    background: #794848;
+    color: red;
+}

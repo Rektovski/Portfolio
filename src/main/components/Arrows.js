@@ -1,18 +1,13 @@
-import {AiOutlineArrowDown as ArrowDownIcon, AiOutlineArrowUp as ArrowUpIcon} from "react-icons/ai";
+import {AiOutlineArrowUp as ArrowUpIcon} from "react-icons/ai";
 import {useState} from "react";
 import {defaultArrowArray} from "../helperJavascript Files/arrowPosition";
 import "../design/arrowsStyle.css";
+import "../design/soundPlayer.css";
+import SoundPlayer from "./profile/SoundPlayer";
 
 export default function Arrows() {
     const [category, setCategory] = useState(defaultArrowArray[0]);
     const [categoryId, setCategoryId] = useState(0);
-
-    const changeArrayLevelDown = (id) => {
-        if (id >= 0 && id <= 1) {
-            setCategory(defaultArrowArray[id + 1]);
-            setCategoryId(prevState => prevState + 1);
-        }
-    }
 
     const changeArrayLevelUp = (id) => {
         if (id >= 1 && id <= 2) {
@@ -23,6 +18,9 @@ export default function Arrows() {
 
     return (
         <>
+            <div className={'soundSpace'}>
+                <SoundPlayer/>
+            </div>
             <a href={`#${category}`} onClick={() => {
                 changeArrayLevelUp(categoryId)
             }}>
@@ -30,14 +28,6 @@ export default function Arrows() {
                     <ArrowUpIcon size={40}/>
                 </button>
             </a>
-
-                {/*<a href={`#${category}`} onClick={() => {*/}
-                {/*    changeArrayLevelDown(categoryId)*/}
-                {/*}}>*/}
-                {/*    <button className={'ArrowDown'}>*/}
-                {/*        <ArrowDownIcon size={40}/>*/}
-                {/*    </button>*/}
-                {/*</a>*/}
         </>
     )
 }

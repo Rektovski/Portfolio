@@ -7,13 +7,6 @@ import {
 import "../../design/visitCardStyle.css";
 
 export default function VisitCard() {
-    // const mail = "murmanishvili94@gmail.com";
-    //
-    // const copy = async () => {
-    //     await navigator.clipboard.writeText(mail);
-    //     window.alert(`Copied!`);
-    // }
-
     return (
         <>
 
@@ -57,18 +50,4 @@ export default function VisitCard() {
             </div>
         </>
     )
-}
-
-
-{/*<div className={'d-flex justify-content-around align-items-center'}>*/
-}
-{/*    <div>*/
-}
-{/*        {`murmanishvili94@gmail.com`}*/
-}
-{/*    </div>*/
-}
-{/*    <Copy size={50} className={'copy-icon mx-4'} onClick={() => {copy()}}/>*/
-}
-{/*</div>*/
 }

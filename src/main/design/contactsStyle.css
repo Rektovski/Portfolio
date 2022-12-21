@@ -35,14 +35,15 @@
 .resumeStyleSpace {
     display: flex;
     justify-content: center;
+    padding: 10px 0 10px 0;
 }
 
 .resumeStyle {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100px;
-    height: 40px;
+    width: 120px;
+    height: 60px;
     border-radius: 10px;
     background: #0D192C;
     color: whitesmoke;
@@ -52,5 +53,5 @@
 .resumeStyle:hover {
     transition: .3s;
     background: #3b5998;
-    padding: 10px 14px;
+    width: 140px;
 }

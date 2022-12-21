@@ -54,7 +54,7 @@ export default function Contacts() {
                                 <a href={resume} download>
                                     Resume
                                 </a>
-                                <DownloadIcon/>
+                                <DownloadIcon size={30}/>
                             </div>
                         </div>
                         <div className={'d-flex justify-content-end'}>
@@ -153,9 +153,6 @@ export default function Contacts() {
                             </div>
                         </div>
                     </div>
-
-
-
                 </Col>
 
                 <Col className={'p-2'} >

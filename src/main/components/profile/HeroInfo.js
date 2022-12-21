@@ -5,11 +5,8 @@ import {Card, CardBody, CardFooter} from "@chakra-ui/react";
 import profileGif from "../../assets/background.webp";
 import eolympLogo from "../../assets/eolymp.png";
 import {RiCheckboxBlankLine as RectIcon} from "react-icons/ri";
-import {
-    AiFillCloseCircle as CloseIcon,
-    AiOutlineMinus as MinusIcon,
-    AiOutlineFolderAdd as TerminalAddIcon
-} from "react-icons/ai";
+import {AiFillCloseCircle as CloseIcon, AiOutlineMinus as MinusIcon,
+    AiOutlineFolderAdd as TerminalAddIcon} from "react-icons/ai";
 import {FaRegHandPeace as HelloIcon, FaRegKeyboard as LanguageIcon} from "react-icons/fa";
 import {TbDeviceDesktopAnalytics as RankIcon} from "react-icons/tb";
 import {BiUser as UserIcon} from "react-icons/bi";
