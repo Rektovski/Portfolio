@@ -97,6 +97,7 @@ export default function HeroInfo() {
                             }
                         </div>
                     </div>
+
                 </div>
 
                 <div className={'KnowledgeBoxHeader'}>

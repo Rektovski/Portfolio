@@ -10,6 +10,9 @@ import {FiSend as SendIcon} from "react-icons/fi";
 import {HiOutlineMail as EmailIcon} from "react-icons/hi"
 import {BsGoogle as GmailIcon} from "react-icons/bs";
 import {ImLocation as LocationIcon, ImMobile as MobileIcon} from "react-icons/im";
+import {FaFileDownload as DownloadIcon} from "react-icons/fa";
+import resume from "../../PDF files/Otar_Murmanishvili_Resume.pdf";
+
 
 export default function Contacts() {
     const [loading, setLoading] = useState(false);
@@ -46,6 +49,14 @@ export default function Contacts() {
                         <div className={'d-flex align-items-center contactTextVisual'}><GmailIcon className={'me-3'} size={20}/> murmanishvili94@gmail.com</div>
                         <hr /><div className={'d-flex align-items-center contactTextVisual'}><MobileIcon className={'me-3'} size={20}/> +995-558-142-959</div>
                         <hr /><div className={'pb-3 d-flex align-items-center contactTextVisual'}><LocationIcon className={'me-3'} size={20}/>Tbilisi, Georgia</div>
+                        <div className={'resumeStyleSpace'}>
+                            <div className={'resumeStyle'}>
+                                <a href={resume} download>
+                                    Resume
+                                </a>
+                                <DownloadIcon/>
+                            </div>
+                        </div>
                         <div className={'d-flex justify-content-end'}>
                             <Button
                                 className={'p-3'}
@@ -142,6 +153,7 @@ export default function Contacts() {
                             </div>
                         </div>
                     </div>
+
 
 
                 </Col>

@@ -31,3 +31,26 @@
     padding: 10px;
     font-family: monospace, Serif;
 }
+
+.resumeStyleSpace {
+    display: flex;
+    justify-content: center;
+}
+
+.resumeStyle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: #0D192C;
+    color: whitesmoke;
+    transition: all .3s ease-in-out;
+}
+
+.resumeStyle:hover {
+    transition: .3s;
+    background: #3b5998;
+    padding: 10px 14px;
+}
