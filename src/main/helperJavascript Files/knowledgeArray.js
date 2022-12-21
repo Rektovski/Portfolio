@@ -19,95 +19,100 @@ import linux from "../assets/heroInfo/linux.png";
 import webstorm from "../assets/heroInfo/webstorm.png";
 import github from "../assets/heroInfo/github.png";
 import figma from "../assets/heroInfo/figma.png";
+import netlify from "../assets/heroInfo/netlify.svg";
 
 export const iknowarray = [
     {
-        "name": "Linux",
+        name: "Linux",
         image: linux
     },
     {
-        "name": "C++",
+        name: "C++",
         image: cpp
     },
     {
-        "name": "Javascript",
+        name: "Javascript",
         image: javascript
     },
     {
-        "name": "Matlab",
+        name: "Matlab",
         image: matlab
     },
     {
-        "name": "React",
+        name: "React",
         image: react
     },
     {
-        "name": "HTML",
+        name: "HTML",
         image: html
     },
     {
-        "name": "CSS",
+        name: "CSS",
         image: css
     },
     {
-        "name": "SCSS",
+        name: "SCSS",
         image: scss
     },
     {
-        "name": "Bootstrap",
+        name: "Bootstrap",
         image: bootstrap
     },
     {
-        "name": "React-Bootstrap",
+        name: "React-Bootstrap",
         image: reactBootstrap
     },
     {
-        "name": "Chakra UI",
+        name: "Chakra UI",
         image: chakraUI
     },
     {
-        "name": "CLion",
+        name: "CLion",
         image: clion
     },
     {
-        "name": "Webstorm",
+        name: "Webstorm",
         image: webstorm
     },
 
     {
-        "name": "Github",
+        name: "Github",
         image: github
     },
     {
-        "name": "Docker",
+        name: "Docker",
         image: docker
     },
     {
-        "name": "Figma",
+        name: "Figma",
         image: figma
     },
+    {
+        name: "Netlify Hosting",
+        image: netlify
+    }
 ]
 
 export const learningNowArray = [
 
     {
-        "name": "Java",
+        name: "Java",
         image: java
     },
     {
-        "name": "Spring Boot",
+        name: "Spring Boot",
         image: springBoot
     },
     {
-        "name": "Intelij",
+        name: "Intelij",
         image: intelij
     },
     {
-        "name": "PostgreSQL",
+        name: "PostgreSQL",
         image: postgresql
     },
     {
-        "name": "SQL",
+        name: "SQL",
         image: sql
     },
 ]
