@@ -1,12 +1,13 @@
-import gesa from "../assets/gesa.png";
-import movies from "../assets/movies.png";
-import saunje from "../assets/saunje.png";
-import marksman from "../assets/marksman.png";
-import weather from "../assets/weather.png";
-import shop from "../assets/shop.png";
-import lawyer from "../assets/lawyer.png";
-import legion from "../assets/legion.png";
-import bitcamp from "../assets/bitcamp.png";
+import gesa from "../assets/projectImages/gesa.png";
+import movies from "../assets/projectImages/movies.png";
+import saunje from "../assets/projectImages/saunje.png";
+import marksman from "../assets/projectImages/marksman.png";
+import weather from "../assets/projectImages/weather.png";
+import shop from "../assets/projectImages/shop.png";
+import lawyer from "../assets/projectImages/lawyer.png";
+import legion from "../assets/projectImages/legion.png";
+import bitcamp from "../assets/projectImages/bitcamp.png";
+import clotheshop from "../assets/projectImages/clotheshop.png";
 
 export const projectsList = [
     // {
@@ -61,6 +62,12 @@ export const projectsList = [
         "name": "Bitcamp Challenge",
         "link": "https://bitcamp2022challenges.netlify.app/",
         "image": bitcamp,
+        "alt": "foto of project"
+    },
+    {
+        "name": "Clothes Shop",
+        "link": "https://clotheshopotara.netlify.app/",
+        "image": clotheshop,
         "alt": "foto of project"
     },
 ]

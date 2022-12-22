@@ -3,7 +3,7 @@ import {CardImg, Col, Container, Row} from "react-bootstrap";
 import {iknowarray, learningNowArray} from "../../helperJavascript Files/knowledgeArray";
 import {Card, CardBody, CardFooter} from "@chakra-ui/react";
 import profileGif from "../../assets/background.webp";
-import eolympLogo from "../../assets/eolymp.png";
+import eolympLogo from "../../assets/projectImages/eolymp.png";
 import {RiCheckboxBlankLine as RectIcon} from "react-icons/ri";
 import {AiFillCloseCircle as CloseIcon, AiOutlineMinus as MinusIcon,
     AiOutlineFolderAdd as TerminalAddIcon} from "react-icons/ai";
