@@ -8,11 +8,6 @@ import bootstrap from "../assets/heroInfo/bootstrap.png";
 import react from "../assets/heroInfo/react.png";
 import reactBootstrap from "../assets/heroInfo/reactbootstrap.Default";
 import chakraUI from "../assets/heroInfo/chakraui.png";
-import java from "../assets/heroInfo/java.png";
-import intelij from "../assets/heroInfo/intelij.jpg";
-import springBoot from "../assets/heroInfo/springboot.png";
-import postgresql from "../assets/heroInfo/postgresql.png";
-import sql from "../assets/heroInfo/sql.jpg";
 import clion from "../assets/heroInfo/clion.png";
 import docker from "../assets/heroInfo/docker.png";
 import linux from "../assets/heroInfo/linux.png";
@@ -74,7 +69,6 @@ export const iknowarray = [
         name: "Webstorm",
         image: webstorm
     },
-
     {
         name: "Github",
         image: github
@@ -91,28 +85,4 @@ export const iknowarray = [
         name: "Netlify Hosting",
         image: netlify
     }
-]
-
-export const learningNowArray = [
-
-    {
-        name: "Java",
-        image: java
-    },
-    {
-        name: "Spring Boot",
-        image: springBoot
-    },
-    {
-        name: "Intelij",
-        image: intelij
-    },
-    {
-        name: "PostgreSQL",
-        image: postgresql
-    },
-    {
-        name: "SQL",
-        image: sql
-    },
 ]

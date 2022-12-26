@@ -1,6 +1,6 @@
 import "../../design/profileStyle.css";
 import {CardImg, Col, Container, Row} from "react-bootstrap";
-import {iknowarray, learningNowArray} from "../../helperJavascript Files/knowledgeArray";
+import {iknowarray} from "../../helperJavascript Files/knowledgeArray";
 import {Card, CardBody, CardFooter} from "@chakra-ui/react";
 import profileGif from "../../assets/background.webp";
 import eolympLogo from "../../assets/projectImages/eolymp.png";
@@ -22,7 +22,7 @@ export default function HeroInfo() {
             <Container>
                 <div className={'Header'}>
                     <div className={'HeaderImage m-2'}>
-                        <img  src={profileGif} alt={'profileGif'}/>
+                        <img src={profileGif} alt={'profileGif'}/>
                     </div>
                     <div className={`${!terminalMaximized ? "HeaderText" : "HeaderTextMaximized"} m-2`}>
 
@@ -85,10 +85,7 @@ export default function HeroInfo() {
                                     <div style={terminalHeight ? {display: 'none'} : {}}>
                                         <span className={"HeaderText1"}>user@host:</span>
                                         <span className={"HeaderText2"}>~</span>
-                                        <span className={"HeaderText3"}>$</span> Well, pardon me young man, excuse the
-                                        shit
-                                        out of my goddamn French but did you just threaten me!? 🧐
-                                        I'm trying ma' best 👨‍💻 to become the beacon of knowledge 🧠 blazing out the black sea of ignorance.
+                                        <span className={"HeaderText3"}>$</span> Nope...
                                     </div>
                                     : ""
                             }
@@ -101,25 +98,8 @@ export default function HeroInfo() {
                     Tech Box
                 </div>
                 <Row style={{maxHeight: 600, overflow: "auto"}} className={'KnowledgeBox bg-dark text-light'}>
-                    <div className={'TechBoxHeader'}>At this moment:</div>
                     {
                         iknowarray.map((item, id) => (
-                            <Col key={id} sm={6} md={4} lg={3} xl={2} xxl={2} className={'g-4'}>
-                                <Card align='center' className={'text-light KnowledgeCard'}>
-                                    <CardBody>
-                                        <CardImg className={'rounded'} style={{width: 70, height: 70}} src={item.image}
-                                                 alt={'tech logos'}/>
-                                    </CardBody>
-                                    <CardFooter className={'CardFooterText text-center'}>
-                                        {item.name}
-                                    </CardFooter>
-                                </Card>
-                            </Col>
-                        ))
-                    }
-                    <div className={'TechBoxHeader'}>Learning now:</div>
-                    {
-                        learningNowArray.map((item, id) => (
                             <Col key={id} sm={6} md={4} lg={3} xl={2} xxl={2} className={'g-4'}>
                                 <Card align='center' className={'text-light KnowledgeCard'}>
                                     <CardBody>

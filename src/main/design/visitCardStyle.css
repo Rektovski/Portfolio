@@ -54,3 +54,27 @@
     scale: 1.1;
     color: #0072b1;
 }
+
+@media (max-width: 991px) {
+    .VisitCard {
+        left: -600px
+    }
+}
+
+@media (max-width: 770px) {
+    .VisitCard {
+        left: -420px
+    }
+}
+
+@media (max-width: 500px) {
+    .VisitCard {
+        left: -300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .VisitCard {
+        left: -270px;
+    }
+}

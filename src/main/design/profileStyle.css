@@ -33,11 +33,7 @@
     animation-name: example3;
 }
 
-@media (max-width: 700px) {
-    .Header {
-        display: block;
-    }
-}
+
 
 
 @keyframes example2 {
@@ -263,4 +259,10 @@
 .AchievementsBox:hover {
     transition: 1s;
     background: #343838;
+}
+
+@media (max-width: 992px) {
+    .Header {
+        display: block;
+    }
 }
