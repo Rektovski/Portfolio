@@ -12,6 +12,7 @@ import {BsGoogle as GmailIcon} from "react-icons/bs";
 import {ImLocation as LocationIcon, ImMobile as MobileIcon} from "react-icons/im";
 import {FaFileDownload as DownloadIcon} from "react-icons/fa";
 import resume from "../../PDF files/Otar_Murmanishvili_Resume.pdf";
+import {reveal} from "../../helperJavascript Files/scrollAnimation";
 
 
 export default function Contacts() {
@@ -21,6 +22,8 @@ export default function Contacts() {
     const [subject, setSubject] = useState("");
     const [email, setEmail] = useState("");
     const [text, setText] = useState("");
+
+    window.addEventListener('scroll', reveal);
 
 
     const initialRef = React.useRef(null)
@@ -42,7 +45,7 @@ export default function Contacts() {
 
     return (
         <Container id={"contacts"}>
-            <Row  className={'d-flex justify-content-around align-items-center'}>
+            <Row  className={'d-flex justify-content-around align-items-center reveal'}>
                 <Col sm={12} md={12} lg={8} className={'p-2'} style={{zIndex: 1}}>
                     <div className={'border bg-dark text-light p-4'}>
                         <div className={'text-center contactHeaderText'}>Contact</div>

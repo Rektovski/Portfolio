@@ -5,17 +5,22 @@ import {Card, CardBody, CardFooter} from "@chakra-ui/react";
 import profileGif from "../../assets/background.webp";
 import eolympLogo from "../../assets/projectImages/eolymp.png";
 import {RiCheckboxBlankLine as RectIcon} from "react-icons/ri";
-import {AiFillCloseCircle as CloseIcon, AiOutlineMinus as MinusIcon,
-    AiOutlineFolderAdd as TerminalAddIcon} from "react-icons/ai";
+import {
+    AiFillCloseCircle as CloseIcon, AiOutlineMinus as MinusIcon,
+    AiOutlineFolderAdd as TerminalAddIcon
+} from "react-icons/ai";
 import {FaRegHandPeace as HelloIcon, FaRegKeyboard as LanguageIcon} from "react-icons/fa";
 import {TbDeviceDesktopAnalytics as RankIcon} from "react-icons/tb";
 import {BiUser as UserIcon} from "react-icons/bi";
 import {useState} from "react";
+import {reveal} from "../../helperJavascript Files/scrollAnimation";
 
 export default function HeroInfo() {
     const [closeButtonTextShow, setCloseButtonTextShow] = useState(false);
     const [terminalHeight, setTerminalHeight] = useState(false);
     const [terminalMaximized, setTerminalMaximized] = useState(false);
+
+    window.addEventListener('scroll', reveal);
 
     return (
         <>
@@ -32,8 +37,10 @@ export default function HeroInfo() {
                                 user@host
                             </div>
                             <div className={'d-flex justify-content-center align-items-center'}>
-                                <MinusIcon className={'HeaderMinus mx-3'} onClick={()=>setTerminalHeight(!terminalHeight)} />
-                                <RectIcon className={'HeaderRectangle me-3'} onClick={()=>setTerminalMaximized(!terminalMaximized)}/>
+                                <MinusIcon className={'HeaderMinus mx-3'}
+                                           onClick={() => setTerminalHeight(!terminalHeight)}/>
+                                <RectIcon className={'HeaderRectangle me-3'}
+                                          onClick={() => setTerminalMaximized(!terminalMaximized)}/>
                                 <CloseIcon
                                     onClick={() => {
                                         setCloseButtonTextShow(!closeButtonTextShow);
@@ -43,7 +50,8 @@ export default function HeroInfo() {
                             </div>
                         </div>
 
-                        <div className={`${!terminalHeight ? "HeaderHello" : "HeaderHelloMinimized"}`} style={terminalHeight ? {height: 0} : {}}>
+                        <div className={`${!terminalHeight ? "HeaderHello" : "HeaderHelloMinimized"}`}
+                             style={terminalHeight ? {height: 0} : {}}>
                             <div style={terminalHeight ? {display: 'none'} : {}}>
                                 <span className={"HeaderText1"}>user@host:</span>
                                 <span className={"HeaderText2"}>~</span>
@@ -115,42 +123,45 @@ export default function HeroInfo() {
                     }
                 </Row>
 
-                <div className={'KnowledgeBoxHeader'}>
-                    Achievements
+                <div className={'reveal'}>
+                    <div className={'KnowledgeBoxHeader'}>
+                        Achievements
+                    </div>
+                    <Row className={'AchievementsBox KnowledgeBox text-center text-light p-2'}>
+                        <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
+                            <div className={'d-flex justify-content-center align-items-center bg-info'}>
+                                <img src={eolympLogo} alt={'eolympLogo'}/>
+                            </div>
+                        </Col>
+                        <Col sm={12} md={12} lg={8} xl={8} xxl={8}>
+                            <div style={{fontSize: 24}}>Website for programmers to self-exercise
+                                into the world of algorithms.
+                            </div>
+                            <div className={'d-flex justify-content-around p-3 text-center'} style={{textAlign: "left"}}>
+                                <div>
+                                    <div>
+                                        <LanguageIcon style={{color: "white"}} size={60}/>
+                                    </div>
+                                    <div>
+                                        C++
+                                    </div>
+                                </div>
+                                <div>
+                                    <RankIcon size={60}/>
+                                    Top 200
+                                </div>
+                                <div>
+                                    <UserIcon size={60}/>
+                                    <a href={"https://www.eolymp.com/en/users/OtarMurmanishvili"}
+                                       target={"_blank"}
+                                       rel={"noreferrer"}>
+                                        Link
+                                    </a>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </div>
-                        <Row className={'AchievementsBox KnowledgeBox text-center text-light p-2'}>
-                            <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
-                                <div className={'d-flex justify-content-center align-items-center bg-info'}>
-                                    <img src={eolympLogo} alt={'eolympLogo'}/>
-                                </div>
-                            </Col>
-                            <Col sm={12} md={12} lg={8} xl={8} xxl={8}>
-                                <div style={{fontSize: 24}}>Website for programmers to self-exercise
-                                    into the world of algorithms. </div>
-                                <div className={'d-flex justify-content-around p-3 text-center'} style={{textAlign: "left"}}>
-                                    <div >
-                                        <div>
-                                            <LanguageIcon  style={{color: "white"}} size={60}/>
-                                        </div>
-                                        <div>
-                                            C++
-                                        </div>
-                                    </div>
-                                    <div >
-                                        <RankIcon size={60}/>
-                                        Top 200
-                                    </div>
-                                    <div >
-                                        <UserIcon size={60}/>
-                                        <a href={"https://www.eolymp.com/en/users/OtarMurmanishvili"}
-                                           target={"_blank"}
-                                           rel={"noreferrer"}>
-                                            Link
-                                        </a>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
             </Container>
         </>
     )

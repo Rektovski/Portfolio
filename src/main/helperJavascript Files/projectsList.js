@@ -6,6 +6,7 @@ import legion from "../assets/projectImages/legion.png";
 import bitcamp from "../assets/projectImages/bitcamp.png";
 import clotheshop from "../assets/projectImages/clotheshop.png";
 import lawyerHub from "../assets/projectImages/lawyerHub.png";
+import blacksmith from "../assets/projectImages/blacksmith.png";
 
 export const projectsList = [
     // {
@@ -54,6 +55,12 @@ export const projectsList = [
         "name": "Laywer Hub",
         "link": "https://laywerhub.netlify.app/",
         "image": lawyerHub,
+        "alt": "foto of project"
+    },
+    {
+        "name": "Blacksmith",
+        "link": "https://alexnord.netlify.app/",
+        "image": blacksmith,
         "alt": "foto of project"
     },
 ]

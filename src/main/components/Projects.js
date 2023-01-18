@@ -1,12 +1,16 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "../design/projectsStyle.css";
 import {projectsList} from "../helperJavascript Files/projectsList";
+import {reveal} from "../helperJavascript Files/scrollAnimation";
 
 export default function Projects() {
+    window.addEventListener('scroll', reveal);
+
     const projects = projectsList.reverse();
+
     return (
         <>
-            <Container className={'p-5 projects'} id={"projects"}>
+            <Container className={'p-5 projects reveal'} id={"projects"}>
                 <div className={'ProjectsHeader text-center'}>Projects</div>
                 <Row>
                     {
