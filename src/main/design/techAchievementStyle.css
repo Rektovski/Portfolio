@@ -1,0 +1,20 @@
+.AchievementsBox {
+    transition: all 1s ease-in-out;
+    background: darkslategray;
+}
+
+.AchievementsBox:hover {
+    transition: 1s;
+    background: #343838;
+}
+
+.KnowledgeBox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 1s;
+    animation-duration: 3s;
+    animation-name: example1;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}

@@ -1,0 +1,24 @@
+.KnowledgeBox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 1s;
+    animation-duration: 3s;
+    animation-name: example1;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+.KnowledgeCard {
+    transition: all 1s ease-in-out;
+    height: 200px;
+}
+
+.KnowledgeCard:hover {
+    transition: .3s;
+    scale: 1.1;
+}
+
+.CardFooterText {
+    font-weight: 900;
+}

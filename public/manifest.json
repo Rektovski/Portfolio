@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Otar Portf",
+  "name": "Otar Murmanishvili s Portfolio",
+  "description": "Portfolio has private and public information about his author...",
   "icons": [
     {
       "src": "favicon.ico",

@@ -170,19 +170,7 @@
     transition: .2s;
 }
 
-.KnowledgeCard {
-    transition: all 1s ease-in-out;
-    height: 200px;
-}
 
-.KnowledgeCard:hover {
-    transition: .3s;
-    scale: 1.1;
-}
-
-.CardFooterText {
-    font-weight: 900;
-}
 
 @keyframes example {
     from {left: -100%}
@@ -234,31 +222,10 @@
     }
 }
 
-.KnowledgeBox {
-    display: flex;
-    align-items: center;
-    position: relative;
-    transition: 1s;
-    animation-duration: 3s;
-    animation-name: example1;
-    overflow: hidden;
-    margin: 0 0 40px 0;
-}
-
 .tooltipText {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.AchievementsBox {
-    transition: all 1s ease-in-out;
-    background: darkslategray;
-}
-
-.AchievementsBox:hover {
-    transition: 1s;
-    background: #343838;
 }
 
 @media (max-width: 992px) {
@@ -266,9 +233,6 @@
         display: block;
     }
 }
-
-
-
 
 .reveal{
     position: relative;

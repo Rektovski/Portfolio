@@ -15,8 +15,13 @@ import webstorm from "../assets/heroInfo/webstorm.png";
 import github from "../assets/heroInfo/github.png";
 import figma from "../assets/heroInfo/figma.png";
 import netlify from "../assets/heroInfo/netlify.svg";
+import windows from "../assets/heroInfo/windows.webp"
 
 export const iknowarray = [
+    {
+        name: "Windows",
+        image: windows
+    },
     {
         name: "Linux",
         image: linux

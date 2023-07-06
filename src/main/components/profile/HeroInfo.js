@@ -1,19 +1,16 @@
 import "../../design/profileStyle.css";
-import {CardImg, Col, Container, Row} from "react-bootstrap";
-import {iknowarray} from "../../helperJavascript Files/knowledgeArray";
-import {Card, CardBody, CardFooter} from "@chakra-ui/react";
+import {Container,} from "react-bootstrap";
 import profileGif from "../../assets/background.webp";
-import eolympLogo from "../../assets/projectImages/eolymp.png";
 import {RiCheckboxBlankLine as RectIcon} from "react-icons/ri";
 import {
     AiFillCloseCircle as CloseIcon, AiOutlineMinus as MinusIcon,
     AiOutlineFolderAdd as TerminalAddIcon
 } from "react-icons/ai";
-import {FaRegHandPeace as HelloIcon, FaRegKeyboard as LanguageIcon} from "react-icons/fa";
-import {TbDeviceDesktopAnalytics as RankIcon} from "react-icons/tb";
-import {BiUser as UserIcon} from "react-icons/bi";
+import {FaRegHandPeace as HelloIcon} from "react-icons/fa";
 import {useState} from "react";
 import {reveal} from "../../helperJavascript Files/scrollAnimation";
+import TechKnowledge from "./TechKnowledge";
+import TechAchievements from "./TechAchievements";
 
 export default function HeroInfo() {
     const [closeButtonTextShow, setCloseButtonTextShow] = useState(false);
@@ -103,64 +100,16 @@ export default function HeroInfo() {
                 </div>
 
                 <div className={'KnowledgeBoxHeader'}>
-                    Tech Box
+                    tech_Knowledge
                 </div>
-                <Row style={{maxHeight: 600, overflow: "auto"}} className={'KnowledgeBox bg-dark text-light'}>
-                    {
-                        iknowarray.map((item, id) => (
-                            <Col key={id} sm={6} md={4} lg={3} xl={2} xxl={2} className={'g-4'}>
-                                <Card align='center' className={'text-light KnowledgeCard'}>
-                                    <CardBody>
-                                        <CardImg className={'rounded'} style={{width: 70, height: 70}} src={item.image}
-                                                 alt={'tech logos'}/>
-                                    </CardBody>
-                                    <CardFooter className={'CardFooterText text-center'}>
-                                        {item.name}
-                                    </CardFooter>
-                                </Card>
-                            </Col>
-                        ))
-                    }
-                </Row>
+
+                <TechKnowledge />
 
                 <div className={'reveal'}>
                     <div className={'KnowledgeBoxHeader'}>
                         Achievements
                     </div>
-                    <Row className={'AchievementsBox KnowledgeBox text-center text-light p-2'}>
-                        <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
-                            <div className={'d-flex justify-content-center align-items-center bg-info'}>
-                                <img src={eolympLogo} alt={'eolympLogo'}/>
-                            </div>
-                        </Col>
-                        <Col sm={12} md={12} lg={8} xl={8} xxl={8}>
-                            <div style={{fontSize: 24}}>Website for programmers to self-exercise
-                                into the world of algorithms.
-                            </div>
-                            <div className={'d-flex justify-content-around p-3 text-center'} style={{textAlign: "left"}}>
-                                <div>
-                                    <div>
-                                        <LanguageIcon style={{color: "white"}} size={60}/>
-                                    </div>
-                                    <div>
-                                        C++
-                                    </div>
-                                </div>
-                                <div>
-                                    <RankIcon size={60}/>
-                                    Top 200
-                                </div>
-                                <div>
-                                    <UserIcon size={60}/>
-                                    <a href={"https://www.eolymp.com/en/users/OtarMurmanishvili"}
-                                       target={"_blank"}
-                                       rel={"noreferrer"}>
-                                        Link
-                                    </a>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
+                    <TechAchievements />
                 </div>
             </Container>
         </>

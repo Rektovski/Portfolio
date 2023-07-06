@@ -1,0 +1,32 @@
+.workExperience {
+    transition: 1s;
+    margin: 60px 0;
+}
+
+.workExperienceHeader {
+    padding: 20px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.workExperienceBody {
+    background: darkslategray;
+    color: #ffffff;
+    height: 400px;
+    overflow: auto;
+}
+
+.workExperienceWorkTitle {
+    font-size: 20px;
+    font-family: "Roboto Light", serif;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.workExperienceWorkDescription {
+    margin-left: 50px;
+    font-style: italic;
+    border: 1px solid #ffffff;
+    border-right-width: 0;
+    border-left-width: 0;
+}
