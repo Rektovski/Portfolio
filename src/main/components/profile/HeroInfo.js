@@ -11,6 +11,8 @@ import {useState} from "react";
 import {reveal} from "../../helperJavascript Files/scrollAnimation";
 import TechKnowledge from "./TechKnowledge";
 import TechAchievements from "./TechAchievements";
+import WorkExperience from "../WorkExperience";
+import Education from "../Education";
 
 export default function HeroInfo() {
     const [closeButtonTextShow, setCloseButtonTextShow] = useState(false);
@@ -100,6 +102,12 @@ export default function HeroInfo() {
                 </div>
 
                 <div className={'KnowledgeBoxHeader'}>
+                    Education
+                </div>
+
+                <Education/>
+
+                <div className={'KnowledgeBoxHeader'}>
                     tech_Knowledge
                 </div>
 
@@ -111,6 +119,8 @@ export default function HeroInfo() {
                     </div>
                     <TechAchievements />
                 </div>
+
+                <WorkExperience/>
             </Container>
         </>
     )

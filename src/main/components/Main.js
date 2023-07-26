@@ -8,7 +8,6 @@ export default function Main() {
     return (
         <>
             <Profile/>
-            <WorkExperience/>
             <Projects/>
             <Contacts/>
             <Footer/>

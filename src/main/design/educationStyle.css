@@ -1,0 +1,37 @@
+.educationSpace {
+    font-family: monospace, 'serif';
+    background: #794848;
+    color: white;
+}
+
+.university {
+}
+
+.universityTitle {
+    font-size: 2rem;
+}
+
+.universityDescription {
+    margin-left: 5px;
+    text-align: justify;
+}
+
+.universityDescriptionDetails {
+    padding: 20px;
+    letter-spacing: 1px;
+}
+
+.universityOLspace {
+    margin: 10px 0 30px 10px;
+}
+
+.universityDescriptionDetailsResult {
+    padding: 20px;
+    text-align: center;
+}
+
+.universityMasterProjectVideo {
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+}

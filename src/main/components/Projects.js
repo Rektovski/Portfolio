@@ -1,4 +1,4 @@
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import "../design/projectsStyle.css";
 import {projectsList} from "../helperJavascript Files/projectsList";
 import {reveal} from "../helperJavascript Files/scrollAnimation";
@@ -10,7 +10,7 @@ export default function Projects() {
 
     return (
         <>
-            <Container className={'p-5 projects reveal'} id={"projects"}>
+            <div className={'p-5 projects reveal'} id={"projects"}>
                 <div className={'ProjectsHeader text-center'}>Projects</div>
                 <Row>
                     {
@@ -32,7 +32,7 @@ export default function Projects() {
                         ))
                     }
                 </Row>
-            </Container>
+            </div>
         </>
     )
 }

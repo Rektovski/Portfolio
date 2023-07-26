@@ -45,8 +45,15 @@ export default function TechAchievements() {
                     </div>
                 </Col>
                 <Col sm={12} md={12} lg={12} xl={12} xxl={12}>
-                    In 2020, while covid-19 was on his top, I achieved more than 200 certificates in various possible directions learning them by online.
-                    Here is a link of all certificates that I have. <a href={'https://drive.google.com/drive/folders/1ntb7uv8ei_NsIVT5tO3fI25Eq-LJzbgX?usp=sharing'} target={'_blank'} style={{color: 'lightblue'}}>Link</a>
+                    In 2020, while covid-19 was on his top, I achieved more than 200 certificates in various possible
+                    directions learning them by online.
+                    Here is a link of all certificates that I have.
+                    <a
+                        href={'https://drive.google.com/drive/folders/1ntb7uv8ei_NsIVT5tO3fI25Eq-LJzbgX?usp=sharing'}
+                        target={'_blank'}
+                        style={{color: 'lightblue'}}
+                        rel="noreferrer"
+                    >Link</a>
                 </Col>
             </Row>
         </>
