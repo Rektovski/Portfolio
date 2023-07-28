@@ -1,14 +1,20 @@
 .educationSpace {
     font-family: monospace, 'serif';
-    background: #794848;
-    color: white;
+    background: #000000;
+    color: #41ff41;
+    padding: 10px;
+}
+
+.universityTitle {
+    font-size: 2rem;
+    text-align: center;
 }
 
 .university {
 }
 
-.universityTitle {
-    font-size: 2rem;
+.universityDescriptionSpace {
+    padding: 20px;
 }
 
 .universityDescription {
@@ -16,22 +22,8 @@
     text-align: justify;
 }
 
-.universityDescriptionDetails {
-    padding: 20px;
-    letter-spacing: 1px;
-}
-
-.universityOLspace {
-    margin: 10px 0 30px 10px;
-}
-
-.universityDescriptionDetailsResult {
-    padding: 20px;
-    text-align: center;
-}
-
 .universityMasterProjectVideo {
     margin: 0 auto;
-    width: 300px;
-    height: 200px;
+    width: 80%;
+    height: 50vh;
 }
