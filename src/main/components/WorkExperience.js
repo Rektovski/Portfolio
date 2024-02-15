@@ -14,11 +14,21 @@ export default function WorkExperience() {
                         {
                             workplaceArray.map((item, id) => (
                                 <div key={id} className={'p-3'}>
-                                    <div className={'workExperienceWorkTitle'}>{`${workplaceArray.length-id}.) ${item.name}`}</div>
+                                    <div
+                                        className={'workExperienceWorkTitle'}>{`${workplaceArray.length - id}.) ${item.name}`}</div>
                                     <div className={'workExperienceWorkDescription'}>
                                         <div>Position: {item.position}</div>
                                         <div>Depart/Categ: {item.department}</div>
                                         <div>Date: {item.date}</div>
+                                        {
+                                            item.link && <div>
+                                                Link: <a href={'https://cpp-otto.netlify.app/'}
+                                                         target={'_blank'}
+                                                         rel={'noreferrer'}
+                                                         style={{color: "lightblue"}}
+                                            >{item.link}</a>
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             ))

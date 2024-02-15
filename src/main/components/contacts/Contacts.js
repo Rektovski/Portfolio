@@ -11,7 +11,7 @@ import {HiOutlineMail as EmailIcon} from "react-icons/hi"
 import {BsGoogle as GmailIcon} from "react-icons/bs";
 import {ImLocation as LocationIcon, ImMobile as MobileIcon} from "react-icons/im";
 import {FaFileDownload as DownloadIcon} from "react-icons/fa";
-import resume from "../../PDF files/Otar_Murmanishvili_Resume.pdf";
+import resume from "../../PDF files/Otar Murmanishvili.pdf";
 import {reveal} from "../../helperJavascript Files/scrollAnimation";
 
 

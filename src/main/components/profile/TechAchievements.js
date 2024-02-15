@@ -53,7 +53,7 @@ export default function TechAchievements() {
                         target={'_blank'}
                         style={{color: 'lightblue'}}
                         rel="noreferrer"
-                    >Link</a>
+                    > Link</a>
                 </Col>
             </Row>
         </>

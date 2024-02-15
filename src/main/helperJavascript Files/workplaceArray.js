@@ -11,6 +11,7 @@ export const workplaceArray = [
         position: 'Teacher of C++ Basic of Algorithms',
         date: '2021-Present',
         department: 'Education',
+        link: "https://cpp-otto.netlify.app/"
     },
     {
         name: 'Agrohub',
