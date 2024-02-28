@@ -1,5 +1,4 @@
 import gesa from "../assets/projectImages/gesa.png";
-// import saunje from "../assets/projectImages/saunje.png";
 import weather from "../assets/projectImages/weather.png";
 import lawyer from "../assets/projectImages/lawyer.png";
 import legion from "../assets/projectImages/legion.png";

@@ -2,7 +2,7 @@
 
 .App {
     cursor: default;
-    font-family: "Comic Sans MS", monospace, sans-serif, serif;
+    font-family: monospace, sans-serif, serif;
     overflow: hidden;
 }
 
