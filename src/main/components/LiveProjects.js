@@ -4,12 +4,15 @@ import image1 from "../assets/liveProjecst/project1/1.png";
 import image2 from "../assets/liveProjecst/project1/2.png";
 import image3 from "../assets/liveProjecst/project1/3.png";
 import image4 from "../assets/liveProjecst/project1/4.png";
+import {reveal} from "../helperJavascript Files/scrollAnimation";
 
 export default function LiveProjects() {
+    window.addEventListener('scroll', reveal);
+
     return (
         <>
             <Container>
-                <div className={'liveProjectsSpace'}>
+                <div className={'liveProjectsSpace reveal'}>
                     <div className={'liveProjectsTitle'}>
                         <div className={'liveProjectsTitleLive'}>Live</div>
                         <div className={'liveProjectsTitleProject'}>Projects:</div>
