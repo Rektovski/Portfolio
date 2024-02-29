@@ -17,32 +17,122 @@
     transition: all .3s ease-in-out;
     padding: 5px 5px;
     border-radius: 22px;
+    overflow: hidden;
+    max-height: 70px;
+}
+
+.soundPlayerAnimation {
+    display: flex;
+}
+
+@keyframes spAnimationStart {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-480px);
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.soundPlayerAnimationStart {
+    animation: spAnimationStart 1s forwards;
+}
+
+@keyframes spAnimationStop {
+    0% {
+        transform: translateX(-480px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.soundPlayerAnimationStop {
+    animation: spAnimationStop 1s forwards;
 }
 
 .soundSpace {
     position: fixed;
-    z-index: 1111;
+    z-index: 1;
     top: 22px;
     left: 22px;
-    animation: 2s comeFromBottom forwards;
-
-    background: rgb(234, 223, 223);
+    animation: 1s comeFromBottom linear;
+    background: rgb(255, 255, 255);
     border-radius: 20px;
+    transition: .3s;
 }
 
 .soundSpace:hover {
+    transition: all .3s ease-in-out;
+    background: rgb(255, 255, 255);
+}
+
+.eyeRoller {
+    width: 100px;
+    height: 55px;
+    transition: all .3s ease-in-out;
+    border-radius: 20%;
+}
+
+.eyeRoller:hover {
     transition: .3s;
-    background: rgb(183, 0, 118);
+    cursor: pointer;
+    color: #ff0000;
+    padding: 30px;
+    border-radius: 100%;
+    scale: 1.5;
+}
+
+.eyeRoller:active {
+    transition: .3s;
+    cursor: pointer;
+    color: #ff0000;
+    padding: 30px;
+    border-radius: 100%;
+    scale: 1.5;
+}
+
+.musicPlayerIconsMain {
+    z-index: 1;
+    background: red;
 }
 
 .musicPlayerIcons {
     transition: all .3s ease-in-out;
-    border-radius: 100%;
+    border-radius: 25%;
+    padding: 20px;
 }
 
-.musicPlayerIcons:hover {
+.musicPlayerIcons:hover, .musicPlayerIconsMain {
     transition: .3s;
     cursor: pointer;
-    background: #794848;
-    color: red;
+    background: #000000;
+    color: #ff0000;
+}
+
+@media (width < 800px) {
+
+    .eyeRoller:hover {
+        transition: .3s;
+        cursor: pointer;
+        color: #ff0000;
+        padding: 0;
+        border-radius: 100%;
+        scale: 1;
+    }
+
+    .eyeRoller:active {
+        transition: .3s;
+        cursor: pointer;
+        color: #ff0000;
+        padding: 30px;
+        border-radius: 100%;
+        scale: 1.5;
+    }
 }

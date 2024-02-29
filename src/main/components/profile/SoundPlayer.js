@@ -1,19 +1,20 @@
 import "../../design/soundPlayer.css";
 import Sound from 'react-sound';
-import song1 from "../../music/shishi.webm";
-import song2 from "../../music/Cocaina.mp4";
-import song3 from "../../music/paintItBlack.webm";
-import song4 from "../../music/whatsGoingOn.mp3";
-import song5 from "../../music/justToOfUs.webm";
+import song1 from "../../music/song1.webm";
+import song2 from "../../music/song2.mp3";
+import song3 from "../../music/song3.webm";
+import song4 from "../../music/song4.mp3";
+import song5 from "../../music/song5.webm";
+import leftEye from "../../assets/soundPlayerImage/1.png";
+import rightEye from "../../assets/soundPlayerImage/2.png";
 import {useState} from "react";
 import {FiPlayCircle as PlayIcon} from "react-icons/fi";
-import {TiMediaPlayReverseOutline as PreviousSongIcon, TiMediaPlayOutline as ForwardSongIcon} from "react-icons/ti";
 import {TbPlayerStop as StopIcon} from "react-icons/tb";
 import {BsMusicNoteBeamed as MusicIcon} from "react-icons/bs";
 
-const SoundPlayer = () => {
+export default function SoundPlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
-    const [hideMusic, setHideMusic] = useState(false);
+    const [hideMusic, setHideMusic] = useState(true);
     const [currentMusic, setCurrentMusic] = useState(0);
     const songs = [song1, song2, song3, song4, song5];
 
@@ -34,27 +35,24 @@ const SoundPlayer = () => {
     }
 
     return (
-        <div>
+        <div className={'soundSpace'}>
             <div className={'musicPlayer'}>
-                {
-                    hideMusic ?
-                        <>
-                            <PreviousSongIcon size={30} className={'musicPlayerIcons'} onClick={choosePreviousSong}/>
-                            {
-                                !isPlaying ?
-                                    <PlayIcon onClick={() => {
-                                        setIsPlaying(!isPlaying)
-                                    }} size={30} className={'musicPlayerIcons'}/>
-                                    :
-                                    <StopIcon onClick={() => {
-                                        setIsPlaying(!isPlaying)
-                                    }} className={'musicPlayerIcons'} size={30}/>
-                            }
-                            <ForwardSongIcon size={30} className={'musicPlayerIcons'} onClick={chooseNextSong}/>
-                        </>
-                        : null
-                }
-                <MusicIcon className={'musicPlayerIcons'} size={30} onClick={() => setHideMusic(!hideMusic)}/>
+                <div className={`soundPlayerAnimation ${hideMusic ? 'soundPlayerAnimationStart' : 'soundPlayerAnimationStop'}`}>
+                    <img src={leftEye} alt={'eye'} className={'eyeRoller'} onClick={choosePreviousSong}/>
+                    {
+                        !isPlaying ?
+                            <PlayIcon onClick={() => {
+                                setIsPlaying(!isPlaying)
+                            }} size={60} className={'musicPlayerIcons'}/>
+                            :
+                            <StopIcon onClick={() => {
+                                setIsPlaying(!isPlaying)
+                            }} className={'musicPlayerIcons'} size={60}/>
+                    }
+                    <img src={rightEye} alt={'eye'} className={'eyeRoller'} onClick={chooseNextSong}/>
+                </div>
+                <MusicIcon className={'musicPlayerIcons'} size={60}
+                           onClick={() => setHideMusic(!hideMusic)}/>
             </div>
             <Sound
                 url={songs[currentMusic]}
@@ -65,5 +63,3 @@ const SoundPlayer = () => {
         </div>
     )
 }
-
-export default SoundPlayer;

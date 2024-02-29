@@ -18,9 +18,7 @@ export default function Arrows() {
 
     return (
         <>
-            <div className={'soundSpace'}>
-                <SoundPlayer/>
-            </div>
+            <SoundPlayer/>
             <a href={`#${category}`} onClick={() => {
                 changeArrayLevelUp(categoryId)
             }}>
