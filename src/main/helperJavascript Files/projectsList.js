@@ -28,7 +28,7 @@ export const projectsList = [
     },
     {
         "name": "Lawyer Project",
-        "link": "https://lawyerhub.netlify.app/",
+        "link": "https://lawyerotara.netlify.app/",
         "image": lawyer,
         "alt": "foto of project"
     },
@@ -52,7 +52,7 @@ export const projectsList = [
     },
     {
         "name": "Laywer Hub",
-        "link": "https://laywerhub.netlify.app/",
+        "link": "https://lawyerhub.netlify.app/",
         "image": lawyerHub,
         "alt": "foto of project"
     },
